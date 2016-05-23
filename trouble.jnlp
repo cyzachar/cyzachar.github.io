@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JNLP File for Trouble Application -->
+<jnlp
+  spec="6.0+"
+  codebase="cyzachar.me"
+  href="trouble.jnlp">
+  <information>
+    <title>Trouble Game Application</title>
+    <description>Trouble Game Application</description>
+    <shortcut online="false" install="false">
+    </shortcut>
+  </information>
+  <security>
+      <all-permissions/>
+  </security>
+  <resources>
+    <jar href="trouble_game.jar"/>
+  </resources>
+  <application-desc/>
+</jnlp>
