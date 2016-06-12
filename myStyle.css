@@ -21,13 +21,13 @@ div#container{
 			background-color: #523611;		/*brown*/
 			border-radius: 25px 25px 0 0;
 		}
-			
+
 			/*h1 font*/
 			@font-face {
 				font-family: 'Handsome Light';
 				src: url('handsomelight.ttf') format('truetype');
 			}
-			
+
 			h1{
 				color: #F2A540;		/*orange: rgb(242,165,64)*/
 				font-family: 'Handsome Light', Arial, sans-serif;
@@ -57,25 +57,25 @@ div#container{
 					border-right: 2px solid #176D8A;	/*dark turquoise*/
 					border-bottom: 2px solid #0892B1; 	/*turquoise*/
 				}
-					
+
 					nav ul li a{
 						color: white;
 						background-color: #0892B1; 		/*turquoise*/
 						text-decoration: none;
 						font-weight: bold;
 					}
-					
+
 					nav ul li:hover a{
 						background-color: #176D8A;			/*dark turquoise*/
 					}
-					
+
 					nav ul li:hover{
 						background-color: #176D8A;			/*dark turquoise*/
 						border-right: 2px solid #15657F;	/*darkest turquoise*/
 						border-bottom: 2px solid #15657F;	/*darkest turquoise*/
 						cursor: pointer;
 					}
-					
+
 					nav ul li#curPage{
 						/*TO DO: something to indicate current page in nav*/
 					}
@@ -85,32 +85,32 @@ div#container{
 		border-radius: 0 0 25px 25px;
 		padding: 2%;
 	}
-		
+
 		@font-face {
 			font-family: 'Cicero Sans Negrita';
 			src: url('Cicero Sans Negrita.ttf') format('truetype');
 		}
-		
+
 		@font-face {
 			font-family: 'Calling Cards';
 			src: url('CallingCards.ttf') format('truetype');
 		}
-		
+
 		h2{
 			font-family: "Calling Cards", sans-serif;
 			text-align: center;
 			margin: 0;
 		}
-		
+
 		h3{
 			font-family: "Calling Cards", sans-serif;
 		}
-		
+
 		h4{
 			font-family: "Calling Cards", sans-serif;
 			text-indent: 1em;
 		}
-		
+
 		p{
 			color: #5C393E;		/*"van cleef" dark purple*/
 			font-family: "Calling Cards", sans-serif;
@@ -119,13 +119,13 @@ div#container{
 			padding: 0 0 .2em;
 			margin: 0;
 		}
-	
+
 	footer{
 		font-size: .8em;
 		clear: both;
 		padding-top: 2%;
 	}
-	
+
 	/*HOME*/
 	img#portrait{
 			display: block;
@@ -133,7 +133,7 @@ div#container{
 			max-width: 250px;
 			margin: 0 auto 2% auto;
 		}
-	
+
 	p#inProgress{
 		color: #523611;
 		background-color: white;
@@ -141,53 +141,53 @@ div#container{
 		padding: .5%;
 		margin: -2% -2% 2% -2%;
 	}
-	
+
 	a.outsideInfo, a.outsideInfo:visited{
 		color: #607D7D;		/*dark turquoise*/
 		text-decoration: none;
 	}
-	
+
 	a.outsideInfo:hover{
 		text-decoration: underline;
 	}
-	
+
 	div#rightNow h3{
 		margin: 2em 0 .5em;
 	}
-	
+
 	/*PROJECTS*/
 	a.webProjLink:hover img{
 		opacity: 0.6;
 	}
-	
+
 	div.project{
 		display: inline-block;
 		clear: both;
 		margin-bottom: 3%;
 	}
-	
+
 	div.project img{
 		width: 100%;
 		max-width: 576px;
 	}
-	
+
 	div.project h3{
 		margin: 1% 0 1% 0;
 		text-align: center;
 	}
-	
+
 	/*SKILLS*/
 	div.skills h3{
 		cursor: pointer;
 		margin-bottom: .25em;
 	}
-	
-	div.skills p.descrip{
+
+	div.skills p{
 		display: none;
 		margin-left: 1em;
 		text-indent: 0;
 	}
-	
+
 	div#futureSkills{
 		display: inline-block;
 		background-color: white;
@@ -196,23 +196,23 @@ div#container{
 		padding: 1%;
 		margin-top: 4%;
 	}
-	
+
 		div#futureSkills h3{
 			text-align: center;
 			margin: 0 0 1% 0;
 		}
-		
+
 		div#futureSkills p{
 			font-size: 12pt;
 			text-indent: 0;
 			text-align: center;
 		}
-		
+
 		div#futureSkills ul{
 			width: 70%;
 			margin: 1% 13% 0 17%;
 		}
-		
+
 			div#futureSkills li{
 				float: left;
 				font-family: "Calling Cards", sans-serif;
@@ -223,13 +223,13 @@ div#container{
 			}
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 500PX------------------------------------------------------------------*/
 @media screen and (min-width: 500px){
-	
+
 	img#portrait{
 		float: left;
 		width: 45%;
 		margin-right: 2%;
 	}
-	
+
 	div.project img{
 		display: block;
 		width: 90%;
@@ -244,7 +244,7 @@ div#container{
 		width: 90%;
 		margin: auto;
 	}
-	
+
 	div.project img{
 		float: left;
 		width: 45%;
@@ -252,7 +252,7 @@ div#container{
 		padding-right: 2%;
 		margin: 0;
 	}
-	
+
 	div.project h3{
 		text-align: left;
 		margin: 0 0 1% 0;
@@ -265,13 +265,13 @@ div#container{
 	div#container{
 		width: 80%;
 	}
-	
+
 	div#projects img{
 		float: left;
 		border: 5px solid #706A2F;
 		border-radius: 5px;
 	}
-	
+
 	div#projects div{
 		display: block;
 		clear: both;
