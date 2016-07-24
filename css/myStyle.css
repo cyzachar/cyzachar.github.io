@@ -25,7 +25,7 @@ div#container{
 			/*h1 font*/
 			@font-face {
 				font-family: 'Handsome Light';
-				src: url('css/handsomelight.ttf') format('truetype');
+				src: url('handsomelight.ttf') format('truetype');
 			}
 
 			h1{
@@ -88,12 +88,12 @@ div#container{
 
 		@font-face {
 			font-family: 'Cicero Sans Negrita';
-			src: url('css/Cicero Sans Negrita.ttf') format('truetype');
+			src: url('Cicero Sans Negrita.ttf') format('truetype');
 		}
 
 		@font-face {
 			font-family: 'Calling Cards';
-			src: url('css/CallingCards.ttf') format('truetype');
+			src: url('CallingCards.ttf') format('truetype');
 		}
 
 		h2{
