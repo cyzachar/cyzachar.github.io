@@ -1,0 +1,236 @@
+{
+  "projects": [
+    {
+      "id": "designPsych",
+      "name": "Web I Psychology of Design Website",
+      "icon": "designPsych.png",
+      "folder": null,
+      "images": [
+        "designPsych_full_screen.png"
+      ],
+      "description": [
+        "The final project for my Web I class was to create a website on a topic of our choice. I chose the psychology of design and pulled the color scheme for the website from an image of a peacock feather (which is also the site's favicon).",
+        "A description of some of the features of the website may be found on the resources page. The most interesting of these features may be found at the bottom of the color page where I used an image map and JavaScript to display different information based on the user's choice."
+      ],
+      "directionHead": null,
+      "directions": [],
+      "link": "http://people.rit.edu/~cmz6274/140/project3/index.html",
+      "linkType": "",
+      "buttonText": "See the Website",
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "mackinac",
+      "name": "Mackinac Island Website",
+      "icon": "mackinac.png",
+      "folder": null,
+      "images": [
+        "mackinac_full_screen.png"
+      ],
+      "description": [
+        "I worked on this website for both the midterm and final projects for my Web II class.  Inspiration for the color scheme came from the Victorian trim on the mostly white houses of downtown Mackinac, and features of note are the DHTML on the natural attractions page and the responsive design of the website.  The blog (built with PHP) does not work correctly on this server because it isn't set up to access the database that is located on a different server.  I may fix this in the future."
+      ],
+      "directionHead": null,
+      "directions": [],
+      "link": "http://people.rit.edu/~cmz6274/240/240proj2/index.php",
+      "linkType": "",
+      "buttonText": "See the Website",
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PHP"
+      ]
+    },
+    {
+      "id": "selectFish",
+      "name": "Select a Fish Dynamic Option Creation",
+      "icon": "selectFish.png",
+      "folder": null,
+      "images": [
+        "selectFish_screen.png"
+      ],
+      "description": [
+        "This project, for my client-side programming course, focused on the dynamic creation of options following a user's selection.  My favorite parts of this project are the bubble and fish animations and the graphics, which I created using PowerPoint.  This seems an unusual choice of program but the results were exactly as I wished the images to appear and there's a bit of a story behind my Powerpoint drawing skills."
+      ],
+      "directionHead": null,
+      "directions": [],
+      "link": "https://people.rit.edu/~cmz6274/340/proj1/selectFish.html",
+      "linkType": "",
+      "buttonText": "See the Website",
+      "skills": [
+        "HTML",
+        "CSS3",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "trouble",
+      "name": "Java Trouble Game",
+      "icon": "trouble.png",
+      "folder": null,
+      "images": [
+        "trouble_screen.png"
+      ],
+      "description": [
+        "This started out as a group project until my partner dropped the class early on.  As a result, I ended up completing it on my own.",
+        "The final product is a multi-player game that is based off of the board game Trouble and is played on one device.  My version is similar to the original in the determination of the beginning player, the operation of turns, and the general rules of the game.  The only differences are in board size and the number of pieces that players move from start to finish.",
+        "The most difficult aspects of implementation were the tie-breaker scenario during the determination of the starting player, the logic behind turn-taking and move validation, and the handling of all the possible cases that could occur as a player's piece nears and enters the finish spaces.  Click the image to the left to download the executable version of this game."
+      ],
+      "directionHead": "How to run the game:",
+      "directions": [
+        "Click here to download a jar file of the game (trouble_game.jar)",
+        "Run the program",
+        "Follow the directions to determine which player will go first",
+        "Enjoy! Note that if you move your cursor to the bottom right of the window on the left, it'll turn into a pointer.  Clicking will give you game directions (I'm not sure what happened to the help icon and may look into that later)"
+      ],
+      "link": "trouble_game.jar",
+      "linkType": "application/java-archive",
+      "buttonText": "Play the Game",
+      "skills": [
+        "Java"
+      ]
+    },
+    {
+      "id": "mancala",
+      "name": "Java Mancala Game",
+      "icon": "mancala.png",
+      "folder": null,
+      "images": [
+        "mancala_screen.png"
+      ],
+      "description": [
+        "For my final project for my second Java course at RIT, I worked in a group of four to create a networked game based off of Mancala.  We worked well together, and the finished game both looks good and functions as it should, with the exception of a few self-correcting bugs that likely result from a problem with the sending or receiving of data between client and server.  The primary challenge in the creation of this game was the interaction between the server and the client - more specifically, the receipt and processing of the data received by either end of the connection."
+      ],
+      "directionHead":"How to run the game:",
+      "directions": [
+        "Click here to download a zip file of the game's components",
+        "Unzip the file and run the surver by opening the MancalaServer.jar file",
+        "Open two mancala clients (Mancala.jar)",
+        "If both clients were opened on the same device, you can use the default \"localhost\" server IP for both.  Otherwise, use the IP address of the device that you ran the server on.",
+        "Enjoy! The second client to join will go first."
+      ],
+      "link": "Mancala.zip",
+      "linkType": "application/zip",
+      "buttonText": "Play the Game",
+      "skills": [
+        "Java",
+        "Teamwork"
+      ]
+    },
+    {
+      "id": "winForm",
+      "name": "IST Windows Form",
+      "icon": "ist.png",
+      "folder": "win_form",
+      "images": [
+        "home.png"
+      ],
+      "description": [
+        "This project involved retrieving json data from an api (www.ist.rit.edu/api) and displaying it on a Windows form using C&#9839; in Visual Studio."
+      ],
+      "directionHead": "How to run the application:",
+      "directions": [
+        "Click here to download a zip file of the application's components",
+        "Unzip the file and run Project3.exe (it should have a particularly unique icon compared to the other files)"
+      ],
+      "link": "Zachar_ist_win_form.zip",
+      "linkType": "application/zip",
+      "buttonText": "See the Application",
+      "skills": [
+        "C&#9839;",
+        "Visual Studio"
+      ]
+    },
+    {
+      "id": "walters",
+      "name": "Explore the Walters App",
+      "icon": "walters.png",
+      "folder": "walters",
+      "images": [
+        "home.png"
+      ],
+      "description": [
+        "This app provides information on the artwork on display at the Walters Art Museum in addition to details on events taking place at the museum, admission and tours, and social media.  The Explore the Walters App was created using the Ionic framework for cross-platform app development. Right now I've only generated the Android version but may generate the iOS app in the future."
+      ],
+      "directionHead": "How to run the app:",
+      "directions": [
+        "Click here to download the app",
+        "Install the app on your android phone and run"
+      ],
+      "link": "android-debug.apk",
+      "linkType": "application/vnd.android.package-archive",
+      "buttonText": "Download the App for Android",
+      "skills": [
+        "Angular.js",
+        "Ionic Framework"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Java (JGrasp &amp; Eclipse)",
+      "description": "I took two courses in Java (using the Eclipse environment) at my high school and passed the AP Computer Science test with a 5.  I've taken two more courses in Java (using JGrasp) at RIT, and I work as a teaching assistant for the first of these two.  I'm accustomed to using the Java APIs to figure out classes that I am not familiar with and am comfortable explaining object oriented programming concepts or my ideas when it comes to solving problems using Java.  Recently, I have been completing some challenges at <a class = \"outsideInfo\" href = \"https://www.codeeval.com/profile/cyzachar/\" target = \"_blank\">CodeEval</a> to give myself more experience using Java to solve different types of problems."
+    },
+    {
+      "name": "HTML5 &amp; CSS3",
+      "description": "I used webs.com to create my first website in high school but that was without the use of HTML and CSS and was a test of patience more than anything else.  During my senior year, I taught myself HTML and CSS as an independent study, took a web class that used Dreamweaver, and volunteered to help with my school district's new website.  Since then I've taken three web courses at RIT and have built nurmerous websites that reinforced my knowledge of these languages."
+    },
+    {
+      "name": "JavaScript",
+      "description": "I completed the JavaScript Codecademy course in high school but didn't use JavaScript until my web classes at RIT.  I'm confident in my knowledge of the language and have experience using it for animation, dynamic element creation, sorting and filtering, compatibility, and local storage."
+    },
+    {
+      "name": "jQuery",
+      "description": "One of the projects for my client programming course focused on using jQuery (incorporating multiple plugins), rather than JavaScript alone, to handle webpage behavior.  In addition, I used jQuery to continuously update and manage the interactive elements of a website I created during my internship at UPMC to display patient requests."
+    },
+    {
+      "name": "Node.js",
+      "description": "I used Node.js to write skills for Amazon's Alexa Voice Service as part of my software engineering internship with UPMC.  I'm fairly comfortable with the framework but feel as if I could use some more experience with it."
+    },
+    {
+      "name": "Alexa Voice Service Skills",
+      "description": "This was the focus of the projects that I worked on over the course of my internship with UPMC Enterprises.  I know what goes into the creation of a new Alexa skill and how to deploy and test it using AWS Lambda and Amazon's Alexa Skills Kit."
+    },
+    {
+      "name": "Jasmine Testing Framework",
+      "description": "I have a fairly basic knowledge of the Jasmine JavaScript testing framework from my internship at UPMC and an interest in learning more."
+    },
+    {
+      "name": "PHP",
+      "description": "I have limited knowledge of PHP and have used it primarily to write to and retrieve data from a database."
+    },
+    {
+      "name": "Databases...SQL (MySQL)",
+      "description": "I have some experience pulling data from and adding data to a MySQL database using PHP from one of my web courses and from a project I worked on as a software engineering intern for UPMC.  Thanks to a database class, I know the process that goes into designing and implementing a database and how to draw and interpret E-R diagrams.  I know the basic SQL commands and can use that knowledge to create and update tables and select and perform functions on data."
+    },
+    {
+      "name": "C&#9839; &amp; Visual Studio",
+      "description": "For a client-side programming class project, I used C&#9839; to consume json data from a web service and display it on a windows form.  I feel as if I know my way around the Visual Studio interface and had no difficulty picking up C&#9839; because of its similarity to Java (object-oriented)."
+    },
+    {
+      "name": "Git",
+      "description": "I wrote Git commands on the Mac Terminal to access and maintain a repository on GitLab for my work for my summer internship at UPMC.  I'm using Git Bash to push changes to this website."
+    },
+    {
+      "name": "Adobe Photoshop",
+      "description": "I used Photoshop quite a bit in a junior high multimedia class and learned some new features in a Web I course at RIT."
+    },
+    {
+      "name": "Wireframing &amp; Prototyping",
+      "description": "I've used Balsamiq and InVision (though not extensively) for wireframing and prototyping respectively for a UX Design course at RIT.  While I may not know everything there is to know about these tools, I feel comfortable using them and am confident that I can figure out anything I don't know."
+    },
+    {
+      "name": "Visual Basic",
+      "description": "This was my first programming language.  I learned it during my freshman year of high school and haven't used it since, but should be able to pick it up again quickly if need be."
+    },
+    {
+      "name": "Minitab Statistical Software",
+      "description": "I'm not so sure that I will find myself using this software in the future, but if it does come up, I know how to perform hypothesis testing on data with different characteristics using Minitab and am familiar with many of the functionalities that the program offers (thanks to my second Statistics course)."
+    }
+  ]
+}

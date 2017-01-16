@@ -142,12 +142,12 @@ div#container{
 		margin: -2% -2% 2% -2%;
 	}
 
-	a.outsideInfo, a.outsideInfo:visited{
+	a.outsideInfo, a.outsideInfo:visited, div.dirLightbox div.featherlight-content ol a{
 		color: #607D7D;		/*dark turquoise*/
 		text-decoration: none;
 	}
 
-	a.outsideInfo:hover{
+	a.outsideInfo:hover, div.dirLightbox div.featherlight-content ol a:hover{
 		text-decoration: underline;
 	}
 
@@ -156,25 +156,106 @@ div#container{
 	}
 
 	/*PROJECTS*/
-	a.webProjLink:hover img{
+	a.webProjLink:hover img, img.projPic:hover{
 		opacity: 0.6;
 	}
 
-	div.project{
-		display: inline-block;
-		clear: both;
-		margin-bottom: 3%;
-	}
-
-	div.project img{
+	img.projPic{
+		float: left;
 		width: 100%;
-		max-width: 576px;
+		padding: 5% 0 0 0;
 	}
 
-	div.project h3{
-		margin: 1% 0 1% 0;
-		text-align: center;
+		img.projPic.lastInRow{
+			padding-right: 0;
+		}
+
+	div.featherlight-content{
+		background-color: #DFCFB4 !important; /*tan*/
+		width: 90%;
 	}
+
+		div.winFormLightbox div.featherlight-content{
+			width: 60%;
+		}
+
+		div.waltersLightbox div.featherlight-content{
+			width: 50%;
+		}
+
+		div.dirLightbox div.featherlight-content{
+			width: 25%;
+		}
+
+			div.dirLightbox div.featherlight-content p{
+				text-indent: 0;
+				text-decoration: underline;
+			}
+
+			div.dirLightbox div.featherlight-content ol{
+				color: #5C393E;		/*"van cleef" dark purple*/
+				font-family: "Calling Cards", sans-serif;
+				padding: 0;
+				margin: 0 0 0 4%;
+			}
+
+	div.lightbox, div.hide{
+		display: none;
+	}
+
+		div.lightbox img{
+			float: left;
+			padding-right: 2%;
+			width: 50%;
+		}
+
+			div#walters img{
+				width: 40%;
+			}
+
+			div#winForm img{
+				width: 70%;
+			}
+
+		div.projDescript{
+			display: block;
+			float: left;
+			width: 50%;
+		}
+
+			div.waltersLightbox div.featherlight-content div.projDescript{
+				width: 60%;
+			}
+
+			div.winFormLightbox div.featherlight-content div.projDescript{
+				width: 30%;
+			}
+
+			div.projDescript h3{
+				margin: 0 0 2%;
+			}
+
+			div.projDescript h4{
+				text-indent: 0;
+				margin: 2% 0 0;
+			}
+
+			div.projDescript p.projSkills{
+				text-indent: 0;
+			}
+
+			div.projDescript button{
+				background-color: #0892B1; /*nav bar blue*/
+				color: white;
+				font-family: "Calling Cards", sans-serif;
+				font-size: 1.1em;
+				border-radius: 5px;
+				padding: 4px 5px 1px;
+			}
+
+				div.projDescript button:hover{
+					cursor: pointer;
+				}
 
 	/*SKILLS*/
 	div.skills h3{
@@ -221,6 +302,16 @@ div#container{
 				width: 45%;
 				margin-bottom: 1%;
 			}
+
+/*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 300PX------------------------------------------------------------------*/
+@media screen and (min-width: 300px){
+
+	img.projPic{
+		width: 49%;
+		padding: 2% 2% 0 0;
+	}
+}
+
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 500PX------------------------------------------------------------------*/
 @media screen and (min-width: 500px){
 
@@ -230,10 +321,8 @@ div#container{
 		margin-right: 2%;
 	}
 
-	div.project img{
-		display: block;
-		width: 90%;
-		margin: 2% auto 1%;
+	img.projPic{
+		width: 32%;
 	}
 }
 
@@ -244,19 +333,6 @@ div#container{
 		width: 90%;
 		margin: auto;
 	}
-
-	div.project img{
-		float: left;
-		width: 45%;
-		max-width: 576px;
-		padding-right: 2%;
-		margin: 0;
-	}
-
-	div.project h3{
-		text-align: left;
-		margin: 0 0 1% 0;
-	}
 }
 
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 1000PX------------------------------------------------------------------*/
@@ -265,16 +341,4 @@ div#container{
 	div#container{
 		width: 80%;
 	}
-
-	div#projects img{
-		float: left;
-		border: 5px solid #706A2F;
-		border-radius: 5px;
-	}
-
-	div#projects div{
-		display: block;
-		clear: both;
-	}
-
 }

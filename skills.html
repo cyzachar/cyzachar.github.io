@@ -5,7 +5,13 @@
 		<title>Cynthia Zachar Skills</title>
 		<link rel = "shortcut icon" href = "assets/3dCZ_transparent.png">
 		<link rel = "stylesheet" type = "text/css" media = "screen" href = "css/myStyle.css"/>
-		<script type = "text/javascript" src = "script.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type = "text/javascript" src = "js/script.js"></script>
+		<script>
+      $(document).ready(function(){
+        loadSkills();
+      });
+    </script>
 	</head>
 	<body>
 		<div id = "container">
@@ -18,131 +24,12 @@
 						<li onclick = "navClickable(this)"><a href = "index.html">Home</a></li>
 						<li onclick = "navClickable(this)"><a href = "projects.html">Projects</a></li>
 						<li id = "curPage"><a href = "skills.html">Skills</a></li>
-						<!--<li><a href = "personality.html">Personality</a></li>-->
 					</ul>
 				</nav>
 			</div>
 			<div id = "content">
 				<h2>Skills</h2>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Java (JGrasp &amp; Eclipse)  &#9662; </h3>		<!--up triangle entity :  &#9652;-->
-					<p>
-						I took two courses in Java (using the Eclipse environment) at my high school and passed the AP Computer Science test with a 5.
-						I've taken two more courses in Java (using JGrasp) at RIT, and I work as a teaching assistant for the first of these two.
-						I'm accustomed to using the Java APIs to figure out classes that I am not familiar with and am comfortable explaining object oriented programming concepts or my ideas when it comes to solving problems using Java.
-						Recently, I have been completing some challenges at <a class = "outsideInfo" href = "https://www.codeeval.com/profile/cyzachar/">CodeEval</a> to give myself more experience using Java to solve different types of problems.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">HTML5 &amp; CSS3 &#9662;</h3>
-					<p>
-						I used webs.com to create my first website in high school but that was without the use of HTML and CSS and was a test of patience more than anything else.
-						During my senior year, I taught myself HTML and CSS as an independent study, took a web class that used Dreamweaver, and volunteered to help with my school district's new website.
-						Since then I've taken three web courses at RIT and have built nurmerous websites that reinforced my knowledge of these languages.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">JavaScript  &#9662;</h3>
-					<p>
-						I completed the JavaScript Codecademy course in high school but didn't use JavaScript until my web classes at RIT.
-						I'm confident in my knowledge of the language and have experience using it for animation, dynamic element creation, sorting and filtering, compatibility, and local storage.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">jQuery  &#9662;</h3>
-					<p>
-						One of the projects for my client programming course focused on using jQuery (incorporating multiple plugins), rather than JavaScript alone, to handle webpage behavior.
-						In addition, I used jQuery to continuously update and manage the interactive elements of a website I created during my internship at UPMC to display patient requests.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Node.js  &#9662;</h3>
-					<p>
-						I used Node.js to write skills for Amazon's Alexa Voice Service as part of my software engineering internship with UPMC.
-						I'm fairly comfortable with the framework but feel as if I could use some more experience with it.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Alexa Voice Service Skills  &#9662;</h3>
-					<p>
-						This was the focus of the projects that I worked on over the course of my internship with UPMC Enterprises.
-						I know what goes into the creation of a new Alexa skill and how to deploy and test it using AWS Lambda and Amazon's Alexa Skills Kit.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Jasmine Testing Framework  &#9662;</h3>
-					<p>
-						I have a fairly basic knowledge of the Jasmine JavaScript testing framework from my internship at UPMC and an interest in learning more.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">PHP &#9662;</h3>
-					<p>
-						I have limited knowledge of PHP and have used it primarily to write to and retrieve data from a database.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Databases...SQL (MySQL)  &#9662;</h3>
-					<p>
-						I have some experience pulling data from and adding data to a MySQL database using PHP from one of my web courses and from a project I worked on as a software engineering intern for UPMC.
-						Thanks to a database class, I know the process that goes into designing and implementing a database and how to draw and interpret E-R diagrams.
-						I know the basic SQL commands and can use that knowledge to create and update tables and select and perform functions on data.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">C# &amp; Visual Studio  &#9662;</h3>
-					<p>
-						For a client-side programming class project, I used C# to consume json data from a web service and display it on a windows form.
-						I feel as if I know my way around the Visual Studio interface and had no difficulty picking up C# because of its similarity to Java (object-oriented).
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Git  &#9662;</h3>
-					<p>
-						I wrote Git commands on the Mac Terminal to access and maintain a repository on GitLab for my work for my summer internship at UPMC.
-						I'm using Git Bash to push changes to this website.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Adobe Photoshop  &#9662;</h3>
-					<p>
-						I used Photoshop quite a bit in a junior high multimedia class and learned some new features in a Web I course at RIT.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Wireframing &amp; Prototyping  &#9662;</h3>
-					<p>
-						I've used Balsamiq and InVision (though not extensively) for wireframing and prototyping respectively for a UX Design course at RIT.
-						While I may not know everything there is to know about these tools, I feel comfortable using them and am confident that I can figure out anything I don't know.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Visual Basic  &#9662;</h3>
-					<p>
-						This was my first programming language.
-						I learned it during my freshman year of high school and haven't used it since, but should be able to pick it up again quickly if need be.
-					</p>
-				</div>
-				<div class = "skills">
-					<h3 onclick = "showDescrip(this)">Minitab Statistical Software  &#9662;</h3>
-					<p>
-						I'm not so sure that I will find myself using this software in the future, but if it does come up, I know how to perform hypothesis testing on data with different characteristics using Minitab
-						 and am familiar with many of the functionalities that the program offers (thanks to my second Statistics course).
-					</p>
-				</div>
-
-				<!--Future Skills-->
-				<!--
-				<div id = "futureSkills">
-					<h3>"Skills in Progress"</h3>
-					<p>
-						These are skills that I expect to pick up over the course of the current semester, based on class descriptions and syllabi.
-					</p>
-					<ul>
-					</ul>
-				</div>
-			-->
-				<footer>Cynthia Zachar &copy; 2016 Designs by Cynthia Zachar</footer>
+				<footer>Cynthia Zachar &copy; 2017</footer>
 			</div>
 		</div>
 	</body>
