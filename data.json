@@ -178,15 +178,19 @@
     },
     {
       "name": "HTML5 &amp; CSS3",
-      "description": "I used webs.com to create my first website in high school but that was without the use of HTML and CSS and was a test of patience more than anything else.  During my senior year, I taught myself HTML and CSS as an independent study, took a web class that used Dreamweaver, and volunteered to help with my school district's new website.  Since then I've taken three web courses at RIT and have built nurmerous websites that reinforced my knowledge of these languages."
+      "description": "I have a good grasp of HTML5 and CSS3 after taking three web courses at RIT and building numerous websites that reinforced my knowledge of the languages."
     },
     {
       "name": "JavaScript",
-      "description": "I completed the JavaScript Codecademy course in high school but didn't use JavaScript until my web classes at RIT.  I'm confident in my knowledge of the language and have experience using it for animation, dynamic element creation, sorting and filtering, compatibility, and local storage."
+      "description": "I'm confident in my knowledge of JavaScript, am familiar with several frameworks, and have experience using the language for animation, dynamic element creation, sorting and filtering, compatibility checking, and local storage."
     },
     {
       "name": "jQuery",
-      "description": "One of the projects for my client programming course focused on using jQuery (incorporating multiple plugins), rather than JavaScript alone, to handle webpage behavior.  In addition, I used jQuery to continuously update and manage the interactive elements of a website I created during my internship at UPMC to display patient requests."
+      "description": "I first learned and used jQuery for a client programming class project.  Since then, I've used it to continuously update and manage the interactive elements of a website I created during my internship at UPMC and to display project and skill information pulled from a json data file for this website."
+    },
+    {
+      "name": "Ionic Framework and Angular.js",
+      "description": "I know the Ionic framework fairly well from using it to develop a cross-platform mobile app for a class.  My knowledge of Angular doesn't extend any farther than its role in Ionic.  I should be able to recognize and make sense of the framework's operations/characteristics and plan on looking into it more in the future."
     },
     {
       "name": "Node.js",
@@ -218,11 +222,15 @@
     },
     {
       "name": "Adobe Photoshop",
-      "description": "I used Photoshop quite a bit in a junior high multimedia class and learned some new features in a Web I course at RIT."
+      "description": "I've taken one course on Photoshop and will be taking another this coming semester.  I'm nowhere near being a Photoshop \"master\" but I know my way around the interface and tools and would be able to pick up anything I don't know how to do from tutorials."
+    },
+    {
+      "name": "Adobe Illustrator",
+      "description": "The pen tool is about the extent of my knowledge of Illustrator, but I'm confident that I can use it to create icons or other simple illustrations if needed."
     },
     {
       "name": "Wireframing &amp; Prototyping",
-      "description": "I've used Balsamiq and InVision (though not extensively) for wireframing and prototyping respectively for a UX Design course at RIT.  While I may not know everything there is to know about these tools, I feel comfortable using them and am confident that I can figure out anything I don't know."
+      "description": "I've used Balsamiq and InVision for wireframing and prototyping respectively for a UX Design course at RIT and I'm familiar with NinjaMock from a different class.  While I may not know everything there is to know about these tools, I feel comfortable using them and am confident that I can figure out anything I don't know."
     },
     {
       "name": "Visual Basic",
@@ -231,6 +239,10 @@
     {
       "name": "Minitab Statistical Software",
       "description": "I'm not so sure that I will find myself using this software in the future, but if it does come up, I know how to perform hypothesis testing on data with different characteristics using Minitab and am familiar with many of the functionalities that the program offers (thanks to my second Statistics course)."
+    },
+    {
+      "name": "SPSS Statistical Software",
+      "description": "I have experience entering, displaying, and some tests on data from a research methods class and expect to pick up more from the next class in the series."
     }
   ]
 }
