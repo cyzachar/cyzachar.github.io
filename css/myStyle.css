@@ -175,14 +175,6 @@ div#container{
 		width: 90%;
 	}
 
-		div.winFormLightbox div.featherlight-content{
-			width: 60%;
-		}
-
-		div.waltersLightbox div.featherlight-content{
-			width: 50%;
-		}
-
 		div.dirLightbox div.featherlight-content{
 			width: 25%;
 		}
@@ -204,31 +196,25 @@ div#container{
 	}
 
 		div.lightbox img{
-			float: left;
-			padding-right: 2%;
-			width: 50%;
+			float: none;
+			padding: 0 2% 2% 0;
+			width: 100%;
 		}
 
 			div#walters img{
+				float: left;
 				width: 40%;
-			}
-
-			div#winForm img{
-				width: 70%;
 			}
 
 		div.projDescript{
 			display: block;
-			float: left;
-			width: 50%;
+			float: none;
+			width: 100%;
 		}
 
 			div.waltersLightbox div.featherlight-content div.projDescript{
+				float: left;
 				width: 60%;
-			}
-
-			div.winFormLightbox div.featherlight-content div.projDescript{
-				width: 30%;
 			}
 
 			div.projDescript h3{
@@ -324,6 +310,17 @@ div#container{
 	img.projPic{
 		width: 32%;
 	}
+
+	div#winForm img{
+		float: left;
+		width: 60%;
+	}
+
+	div.winFormLightbox div.featherlight-content div.projDescript{
+		float: left;
+		width: 40%;
+	}
+
 }
 
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 750PX------------------------------------------------------------------*/
@@ -333,6 +330,38 @@ div#container{
 		width: 90%;
 		margin: auto;
 	}
+
+	div.featherlight-content{
+		width: 90%;
+	}
+
+		div.winFormLightbox div.featherlight-content{
+			width: 60%;
+		}
+
+		div.waltersLightbox div.featherlight-content{
+			width: 50%;
+		}
+
+		div.lightbox img{
+			float: left;
+			padding: 0 2% 0 0;
+			width: 50%;
+		}
+
+			div#walters img{
+				width: 40%;
+			}
+
+		div.projDescript{
+			display: block;
+			float: left;
+			width: 50%;
+		}
+
+			div.waltersLightbox div.featherlight-content div.projDescript{
+				width: 60%;
+			}
 }
 
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 1000PX------------------------------------------------------------------*/

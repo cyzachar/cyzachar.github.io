@@ -56,7 +56,7 @@ function loadProjects(){
 			var title = $('<h3></h3>').text(project.name);
 			var descript = $('<div></div>').addClass('projDescript').append(title);
 			$.each(project.description, function(index, pgh){
-				descript.append($('<p></p>').text(pgh));
+				descript.append($('<p></p>').html(pgh));	//html b/c some special characters in there
 			});
 
 			/*skills*/
