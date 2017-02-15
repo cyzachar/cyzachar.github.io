@@ -1,22 +1,21 @@
 body{
-  background-color: #001024;
+  background-color: #E9E9E9;
 	padding: 0;
 	margin: 1%;
 }
 
 div#container{
-	display: block;
   width: 80%;
   margin: auto;
 }
 
 #banner{
-  background-color: #385d8a;
-  border-radius: 25px 25px 0 0;
+  background-color: #001024;
+  border-radius: 5px 5px 0 0;
 }
 
 h1{
-  color: #CCD4DD;
+  color: white;
   font-size: 3em;
   text-align: center;
   padding: 1% 0;
@@ -24,10 +23,10 @@ h1{
 }
 
 #content{
-  background-color: #E8FFFF;
+  background-color: white;
   display: block;
-  border-radius: 0 0 25px 25px;
   padding: 2%;
+  border-radius: 0 0 5px 5px;
 }
 
 h2{
@@ -35,12 +34,12 @@ h2{
 }
 
 p, li{
-  color: #002A5C;
+  color: #313433;
   font-family: sans-serif;
 }
 
 div.stakeholder{
-  background-color: #D5DDDD;
+  background-color: #E8FFFF;
   width: 50%;
   padding: 1%;
   margin: 0 0 2% 1%;
@@ -50,7 +49,6 @@ div.stakeholder{
   div.stakeholder h3{
     color: #234976;
     margin: 0 0 1% 0;
-    text-decoration: underline;
   }
 
   div.groupIncludes{
