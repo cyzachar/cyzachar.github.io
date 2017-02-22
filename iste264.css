@@ -38,6 +38,17 @@ p, li{
   font-family: sans-serif;
 }
 
+img{
+  border: 2px solid #002A5C;
+  border-radius: 5px;
+  padding: 1%;
+  margin-top: 1%;
+}
+
+a{
+  color: #002552;
+}
+
 div.stakeholder{
   background-color: #E8FFFF;
   width: 50%;
