@@ -6,8 +6,15 @@
 		<title>Cynthia Zachar</title>
 		<link rel = "shortcut icon" href = "assets/3dCZ_transparent.png">
 		<link rel = "stylesheet" type = "text/css" media = "screen" href = "css/myStyle.css"/>
+		<link href="css/featherlight.css" type="text/css" rel="stylesheet" />
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/featherlight.js" type="text/javascript" charset="utf-8"></script>
 		<script type = "text/javascript" src = "js/script.js"></script>
+		<script>
+      $(document).ready(function(){
+
+      });
+    </script>
 	</head>
 	<body>
 		<div id = "container">
@@ -29,14 +36,16 @@
 				<div id = "portraitContainer">
 					<div id = "portraits">
 						<img id = "bottomPortrait" src = "assets/me.jpg" alt = "Cynthia Zachar"/>
-						<img id = "topPortrait" onmouseover = "showPptMe()" onmouseout = "hidePptMe()" src = "assets/ppt_me.png" alt = "Cynthia Zachar"/>
+						<a href="#" data-featherlight="#pptInfo">
+							<img id = "topPortrait" onmouseover = "showPptMe()" onmouseout = "hidePptMe()" src = "assets/ppt_me_i.png" alt = "Cynthia Zachar"/>
+						</a>
 					</div>
 				</div>
 				<div>
 					<h2>Overview</h2>
 					<p>
 						I'm a third year Information Technology and Human-Centered Computing student at the Rochester Institute of Technology.
-						But if you've checked out my <a class = "outsideInfo" href = "https://www.linkedin.com/in/cynthia-zachar-2112b2a2">LinkedIn profile</a> or my <a class = "outsideInfo" href = "https://www.dropbox.com/s/5hnudkr4nkcuc1e/Zachar_Resume_Styled.pdf?dl=0">resume</a>, you already know that.
+						But if you've checked out my <a class = "outsideInfo" href = "https://www.linkedin.com/in/cynthia-zachar-2112b2a2">LinkedIn profile</a> or my <a class = "outsideInfo" href = "https://www.dropbox.com/s/u170ozv3sqywgej/Zachar_Cynthia_Resume_IT.docx?dl=0">resume</a>, you already know that.
 						The purpose of this website is not to present the same information in a different format, but to give you a better idea of who I am and what kind of experience I have.
 					</p>
 				</div>
@@ -44,6 +53,22 @@
 					<h3>Right now...</h3>
 					<p>
 						I'm heading into my spring semester of classes at RIT and am looking forward to working for Steelcase for the summer of 2017.
+					</p>
+				</div>
+				<div id = "pptInfo" class = "lightbox">
+					<img src = "assets/pptAnimals.png" src = "PowerPoint Illustrations of Animals"/>
+					<h3>An Unusual Skill: PowerPoint Illustration</h3>
+					<p>
+						The portrait of myself as well as all the animals you see here were created using the drawing tools of Microsoft PowerPoint.
+						This seems an unusual choice of program, but when I was somewhere between the ages of 9 and 12, my sister and I created some elaborate PowerPoint slide shows as a means of entertaining ourselves.
+						These slides featured animated stories using characters that we built using basic shapes and freehand and text that linked between slides.
+						We built entire worlds for these characters -- likely inspired in part by Webkinz and Tamagotchi.
+					</p>
+					<p>
+						It turns out that I retained some of my drawing skills and sharpened them further when I created fish illustrations for a client programming class project (see projects page).
+						Now, the drawings are almost entirely freehand and based off of images (rather than my imagination).
+						The drawing on my home page is based on a different image than the one it transitions from, so that's why it's a little off.
+						I do know how to use Adobe Illustrator fairly well but I keep coming back to PowerPoint when I know I can achieve the look I want with it.
 					</p>
 				</div>
 				<footer>Cynthia Zachar &copy; 2017</footer>
