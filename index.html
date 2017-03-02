@@ -3,7 +3,6 @@
 	<head>
 		<meta charset = "UTF-8">
 		<meta name = "description" content = "Cynthia Zachar: Full Stack Developer; IT and Human-Centered Computing Student at Rochester Institute of Technology">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Cynthia Zachar</title>
 		<link rel = "shortcut icon" href = "assets/3dCZ_transparent.png">
 		<link rel = "stylesheet" type = "text/css" media = "screen" href = "css/myStyle.css"/>
@@ -27,7 +26,12 @@
 			</div>
 			<div id = "content">
 				<!--<p id = "inProgress">**This website is a work in progress.  Responsive pages and additional content to come.**</p>-->
-				<img id = "portrait" src = "assets/me.jpg" alt = "Cynthia Zachar"/>
+				<div id = "portraitContainer">
+					<div id = "portraits">
+						<img id = "bottomPortrait" src = "assets/me.jpg" alt = "Cynthia Zachar"/>
+						<img id = "topPortrait" onmouseover = "showPptMe()" onmouseout = "hidePptMe()" src = "assets/ppt_me.png" alt = "Cynthia Zachar"/>
+					</div>
+				</div>
 				<div>
 					<h2>Overview</h2>
 					<p>

@@ -28,6 +28,16 @@ function navClickable(navBlock){
 	window.location = navBlock.getElementsByTagName("a")[0].href;
 }
 
+function showPptMe(){
+	$("#topPortrait").css("opacity", 1);
+	$("#bottomPortrait").css("opacity", 0);
+}
+
+function hidePptMe(){
+	$("#topPortrait").css("opacity", 0);
+	$("#bottomPortrait").css("opacity", 1);
+}
+
 /*
  * Adds links and project lightboxes to page content for each project in the data file
  */

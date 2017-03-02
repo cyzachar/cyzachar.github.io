@@ -127,11 +127,36 @@ div#container{
 	}
 
 	/*HOME*/
-	img#portrait{
-			display: block;
-			width: 70%;
-			max-width: 250px;
-			margin: 0 auto 2% auto;
+	div#portraitContainer{
+		display: block;
+		width: 70%;
+		max-width: 250px;
+		min-height: 250px;
+		margin: 0 auto 2% auto;
+	}
+
+	div#portraits{
+		position: relative;
+		margin: 0 auto;
+	}
+
+		div#portraits img{
+			position: absolute;
+			left: 0;
+			width: 100%;
+			-webkit-transition: opacity 2s ease-in-out;
+			-moz-transition: opacity 2s ease-in-out
+			-o-transition: opacity 2s ease-in-out;
+			transition: opacity 2s ease-in-out;
+			cursor: pointer;
+		}
+
+		div#portraits img#topPortrait{
+			opacity:0;
+		}
+
+		div#portraits img#bottomPortrait{
+			opacity:1;
 		}
 
 	p#inProgress{
@@ -301,7 +326,7 @@ div#container{
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 500PX------------------------------------------------------------------*/
 @media screen and (min-width: 500px){
 
-	img#portrait{
+	div#portraitContainer{
 		float: left;
 		width: 45%;
 		margin-right: 2%;
