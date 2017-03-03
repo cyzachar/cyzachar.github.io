@@ -4,7 +4,7 @@
 		<meta charset = "UTF-8">
 		<meta name = "description" content = "Cynthia Zachar: Full Stack Developer; IT and Human-Centered Computing Student at Rochester Institute of Technology">
 		<title>Cynthia Zachar</title>
-		<link rel = "shortcut icon" href = "assets/3dCZ_transparent.png">
+		<link rel = "shortcut icon" href = "assets/fav_font.png">
 		<link rel = "stylesheet" type = "text/css" media = "screen" href = "css/myStyle.css"/>
 		<link href="css/featherlight.css" type="text/css" rel="stylesheet" />
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
@@ -12,7 +12,9 @@
 		<script type = "text/javascript" src = "js/script.js"></script>
 		<script>
       $(document).ready(function(){
-
+				if(jQuery.browser.mobile){
+					$("#hoverPrompt").remove();
+				}
       });
     </script>
 	</head>
@@ -39,6 +41,7 @@
 						<a href="#" data-featherlight="#pptInfo">
 							<img id = "topPortrait" onmouseover = "showPptMe()" onmouseout = "hidePptMe()" src = "assets/ppt_me_i.png" alt = "Cynthia Zachar"/>
 						</a>
+						<img id = "hoverPrompt" src = "assets/hover.png" alt = "Hover here"/>
 					</div>
 				</div>
 				<div>
