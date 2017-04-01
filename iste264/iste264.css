@@ -70,6 +70,14 @@ div.stakeholder{
       margin: 0;
     }
 
+div#lowFiEval p{
+  text-indent: 3em;
+}
+
+img#lowFi{
+  width: 60%;
+}
+
 .bold{
   font-weight: bold;
 }
