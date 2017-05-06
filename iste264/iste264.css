@@ -64,6 +64,7 @@ div.stakeholder{
 
   div.groupIncludes{
     margin-bottom: 1em;
+
   }
 
     div.groupIncludes ul, p{
@@ -74,9 +75,36 @@ div#lowFiEval p{
   text-indent: 3em;
 }
 
-img#lowFi{
+img#lowFi, img#hiFi{
   width: 60%;
 }
+
+  img#hiFi:hover{
+    opacity: 0.6;
+  }
+
+div.task{
+  margin-bottom: 3em;
+  border: 1px solid #979A99;
+  border-radius: 8px;
+}
+
+  div.task h3{
+    margin: .5em .5em 0;
+  }
+
+  div.task ul{
+    margin: .5em;
+  }
+
+  p.taskStmt{
+    display: block;
+    color: #979A99;
+    font-weight: bold;
+    background-color: #E4E7E6;
+    padding: .5em;
+    border-radius: 8px 8px 0 0;
+  }
 
 .bold{
   font-weight: bold;
