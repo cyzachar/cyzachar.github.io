@@ -174,7 +174,7 @@
   "skills": [
     {
       "name": "Java (JGrasp &amp; Eclipse)",
-      "description": "I took two courses in Java (using the Eclipse environment) at my high school and passed the AP Computer Science test with a 5.  I've taken two more courses in Java (using JGrasp) at RIT, and have worked as a teaching assistant for both.  I'm accustomed to using the Java APIs to figure out classes that I am not familiar with and am comfortable explaining object oriented programming concepts or my ideas when it comes to solving problems using Java.  Recently, I have been completing some challenges at <a class = \"outsideInfo\" href = \"https://www.codeeval.com/profile/cyzachar/\" target = \"_blank\">CodeEval</a> to give myself more experience using Java to solve different types of problems."
+      "description": "I took two courses in Java (using the Eclipse environment) at my high school and passed the AP Computer Science test with a 5.  I've taken two more courses in Java (using JGrasp) at RIT and have worked as a teaching assistant for both.  In two additional courses, I've used Java to access and alter data in a database and to build SOAP and RESTful services.  I'm accustomed to using the Java APIs to figure out classes that I am not familiar with and am comfortable explaining object oriented programming concepts or my ideas when it comes to solving problems using Java."
     },
     {
       "name": "HTML5 &amp; CSS3",
@@ -206,7 +206,7 @@
     },
     {
       "name": "PHP",
-      "description": "I have limited knowledge of PHP and have used it primarily to write to and retrieve data from a database."
+      "description": "The server programming course I recently completed covered PHP extensively so I now know how to use it to write classes, access and alter data in a database, validate and sanitize data, parse XML and JSON, build, deploy, and access a SOAP or RESTful service, or maintain state using cookies, sessions, form fields, or url"
     },
     {
       "name": "Databases...SQL (MySQL)",
@@ -214,23 +214,27 @@
     },
     {
       "name": "C&#9839; &amp; Visual Studio",
-      "description": "For a client-side programming class project, I used C&#9839; to consume json data from a web service and display it on a windows form.  I feel as if I know my way around the Visual Studio interface and had no difficulty picking up C&#9839; because of its similarity to Java (object-oriented)."
+      "description": "For a client-side programming class project, I used C&#9839; to consume json data from a web service and display it on a windows form.  I've also used it a little in other classes to access and alter data in a database and to build and deploy a SOAP and RESTful service.  I feel as if I know my way around the Visual Studio interface and, while I have not had as much experience with C&#9839; as I've had with Java, I'm confident that I can figure out how to perform different types of tasks with it."
     },
     {
       "name": "Git",
-      "description": "I wrote Git commands on the Mac Terminal to access and maintain a repository on GitLab for my work for my summer internship at UPMC.  I'm using Git Bash to push changes to this website."
+      "description": "I wrote Git commands on the Mac Terminal to access and maintain a repository on GitLab for my work for my summer internship at UPMC.  I've also used Git Bash to push changes to a group class project and to this website."
     },
     {
       "name": "Adobe Photoshop",
-      "description": "I've taken one course on Photoshop and will be taking another this coming semester.  I'm nowhere near being a Photoshop \"master\" but I know my way around the interface and tools and would be able to pick up anything I don't know how to do from tutorials."
+      "description": "I've taken two courses on Photoshop at RIT.  I'm nowhere near being a Photoshop \"master\" but I know my way around the interface and tools and would be able to pick up anything I don't know how to do from tutorials."
     },
     {
       "name": "Adobe Illustrator",
-      "description": "The pen tool is about the extent of my knowledge of Illustrator, but I'm confident that I can use it to create icons or other simple illustrations if needed."
+      "description": "The two classes I took on Photoshop also covered Illustrator some.  As a result, I am adept at using the pen tool, in particular, and know my way around the Illustrator interface."
+    },
+    {
+      "name": "Adobe InDesign",
+      "description": "I used InDesign once for a class project (designing a recipe book), so I understand the basics of the program and can build on that more in the future if needed."
     },
     {
       "name": "Wireframing &amp; Prototyping",
-      "description": "I've used Balsamiq and InVision for wireframing and prototyping respectively for a UX Design course at RIT and I'm familiar with NinjaMock from a different class.  While I may not know everything there is to know about these tools, I feel comfortable using them and am confident that I can figure out anything I don't know."
+      "description": "I've used Sketch, Balsamiq, and NinjaMock for wireframing and InVision and Principle for prototyping in various classes.  I'm competent with all the tools but have varying amounts of experience with them and more to learn for some."
     },
     {
       "name": "Visual Basic",
@@ -242,7 +246,7 @@
     },
     {
       "name": "SPSS Statistical Software",
-      "description": "I have experience entering, displaying, and running some tests on data from a research methods class and expect to pick up more from the next class in the series."
+      "description": "I have experience entering, displaying, and running some tests on data from two research methods classes."
     }
   ]
 }
