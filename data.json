@@ -128,7 +128,13 @@
       "icon": "ist.png",
       "folder": "win_form",
       "images": [
-        "home.png"
+        "home.png",
+        "degrees.png",
+        "minor.png",
+        "careers.png",
+        "people.png",
+        "research.png",
+        "news.png"
       ],
       "description": [
         "This project involved retrieving json data from an api (www.ist.rit.edu/api) and displaying it on a Windows form using C&#9839; in Visual Studio."
@@ -152,7 +158,14 @@
       "icon": "walters.png",
       "folder": "walters",
       "images": [
-        "home.png"
+        "home.png",
+        "menu.png",
+        "collection.png",
+        "artwork.png",
+        "map.png",
+        "events.png",
+        "event.png",
+        "about.png"
       ],
       "description": [
         "This app provides information on the artwork on display at the Walters Art Museum in addition to details on events taking place at the museum, admission and tours, and social media.  The Explore the Walters App was created using the Ionic framework for cross-platform app development. Right now I've only generated the Android version but may generate the iOS app in the future."

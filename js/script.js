@@ -34,19 +34,21 @@ function navClickable(navBlock){
 	window.location = navBlock.getElementsByTagName("a")[0].href;
 }
 
+/**
+ * Switches from displaying photo to ppt illustration
+ */
 function showPptMe(){
 	$("#topPortrait").css("opacity", 1);
 	$("#bottomPortrait").css("opacity", 0);
 	$("#hoverPrompt").remove();
 }
 
+/**
+ * Switches from displaying ppt illustration to photo
+ */
 function hidePptMe(){
 	$("#topPortrait").css("opacity", 0);
 	$("#bottomPortrait").css("opacity", 1);
-}
-
-function checkIfMobile(){
-
 }
 
 /*
@@ -57,7 +59,7 @@ function loadProjects(){
 	  $.each( data.projects, function(index, project) {
 
 			/*Project icons, linking to lightbox*/
-			var newIcon = $('<img>').addClass('projPic').attr('src', 'assets/' + project.icon);
+			var newIcon = $('<img>').addClass('projPic').attr('src', 'assets/' + project.icon).attr('alt', project.name).attr('title', project.name);
 			handleResize();
 			var newLink = $('<a></a>').attr('href', '#').attr('data-featherlight-variant', project.id + 'Lightbox').append(newIcon);
 			$('footer').before(newLink);
@@ -70,7 +72,7 @@ function loadProjects(){
 			if(project.folder !== null){
 				imgLoc += project.folder + '/';
 			}
-			var newImg = $('<img>').attr('src', imgLoc + project.images[0]);
+			var newImg = $('<img>').attr('src', imgLoc + project.images[0]).attr('alt', project.name).attr('title', project.name);
 			newProj.append(newImg);
 
 			/*title and description*/
