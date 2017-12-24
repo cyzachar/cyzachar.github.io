@@ -6,7 +6,7 @@
 
 /*
  * Shows the description associated with the skill header that was clicked
- * @param which - the h3 that was clicked
+ * @param which		the h3 that was clicked
  */
 function showDescrip(which){
 	var skillName = which.innerHTML;
@@ -28,7 +28,7 @@ function showDescrip(which){
 
 /*
  * Ensures that entire navigation block acts as a link
- * @param navBlock - the list item to act as a link
+ * @param navBlock		the list item to act as a link
  */
 function navClickable(navBlock){
 	window.location = navBlock.getElementsByTagName("a")[0].href;
@@ -61,19 +61,34 @@ function loadProjects(){
 			/*Project icons, linking to lightbox*/
 			var newIcon = $('<img>').addClass('projPic').attr('src', 'assets/' + project.icon).attr('alt', project.name).attr('title', project.name);
 			handleResize();
-			var newLink = $('<a></a>').attr('href', '#').attr('data-featherlight-variant', project.id + 'Lightbox').append(newIcon);
-			$('footer').before(newLink);
+			var newLink = $('<a></a>').append(newIcon);
+			$('#darkBack').before(newLink);
 
 			/*Project lightbox*/
-			var newProj = $('<div></div>').attr('id', project.id).addClass('lightbox');
+			var newProj = $('<div></div>').attr('id', project.id).addClass('myLightbox').addClass('hide');
+			var closeBtn = $('<h4></h4>').attr('id', 'closeIcon').text("x").click(function(){closeLightboxByIcon(this)});
+			newProj.append(closeBtn);
 
 			/*Project image*/
+			var projImgDiv = $('<div></div>').addClass('projImgDiv');
 			var imgLoc = 'assets/';
 			if(project.folder !== null){
 				imgLoc += project.folder + '/';
 			}
-			var newImg = $('<img>').attr('src', imgLoc + project.images[0]).attr('alt', project.name).attr('title', project.name);
-			newProj.append(newImg);
+			var newImg = $('<img>').addClass('projDetailsImg').attr('src', imgLoc + project.images[0]).attr('alt', project.name).attr('title', project.name);
+			if(project.images.length > 1){
+				var lArrow = $('<img>').addClass('lArrow').attr('src', 'assets/lArrow.png').attr('alt', 'left arrow').attr('title', 'left arrow').css('visibility','hidden');
+				lArrow.click(function(){switchImg(newImg, -1, project.images, lArrow, rArrow, index)});
+				projImgDiv.append(lArrow);
+				projImgDiv.append(newImg);
+				var rArrow = $('<img>').addClass('rArrow').attr('src', 'assets/rArrow.png').attr('alt', 'right arrow').attr('title', 'right arrow');
+				rArrow.click(function(){switchImg(newImg, 1, project.images, lArrow, rArrow)});
+				projImgDiv.append(rArrow);
+			}
+			else{
+				projImgDiv.append(newImg);
+			}
+			newProj.append(projImgDiv);
 
 			/*title and description*/
 			var title = $('<h3></h3>').text(project.name);
@@ -128,15 +143,64 @@ function loadProjects(){
 			}
 
 			newProj.append(descript);
-			newLink.after(newProj).featherlight(newProj);
+			$('footer').before(newProj);
 
+			newLink.click(function(){
+				showLightbox(project.id);
+			});
 	  });	//end each loop
 	});	//end getJSON
 }	//end loadProjects function
 
-//TO DO include alt and title for images
-//TO DO figure out a better way to add assets/ before urls
+/**
+ * Switches source of project image based on a user-selected direction
+ * @param image			the image to change
+ * @param direction	1 to indicate right or -1 to indicate left
+ * @param imgArr			array of img srcs for the projects
+ * @param lArrow			the left arrow that accompanies the image
+ * @param rArrow			the right arrow that accompanies the image
+ */
+function switchImg(image, direction, imgArr, lArrow, rArrow){
+	var splitSrc = image.attr('src').split('/');
+	var imgName = splitSrc[splitSrc.length - 1];
+	var curIndex = imgArr.indexOf(imgName);
+	var newIndex = curIndex + direction;
+	lArrow.css('visibility','visible');
+	rArrow.css('visibility','visible');
 
+	if(newIndex == 0){
+		lArrow.css('visibility','hidden');
+	}
+	else if(newIndex == imgArr.length - 1){
+		rArrow.css('visibility','hidden');
+	}
+	var newSrc = "";
+	for(i = 0; i < splitSrc.length - 1; i++){
+		newSrc += splitSrc[i] + "/";
+	}
+	newSrc += imgArr[newIndex];
+	image.attr('src',newSrc);
+}
+
+
+/*
+ * Positions arrows on either side of a project img
+ */
+function positionImgSwitchArrows(){
+	$('.myLightbox').each(function(index, item){
+		if($(item).css('display') == "block"){
+			lightboxId = $(item).attr('id');
+			var lArrow = $('div#' + lightboxId + ' img.lArrow');
+			var rArrow = $('div#' + lightboxId + ' img.rArrow');
+			if(lArrow.length > 0 || rArrow.length > 0){		//if has arrows
+				var imgHeight = $('div#' + lightboxId + ' img.projDetailsImg').height();
+				var arrowTop = (imgHeight - lArrow.height())/2;
+				lArrow.css('margin-top',arrowTop + 'px');
+				rArrow.css('margin-top',arrowTop + 'px');
+			}
+		}
+	});
+}
 
 /*
  * Adds skills with descriptions to page content for each skill in the data file
@@ -167,13 +231,21 @@ function handleResize(){
 	else{
 		projPerRow = 3;
 	}
+
 	assignLastInRow(projPerRow);
+
+	$('.myLightbox').each(function(index, item){
+		if($(item).css('display') == "block"){
+			positionLightbox($(item));
+			positionImgSwitchArrows();
+		}
+	});
 }
 
 /*
  * Assigns/removes lastInRow class designation as needed to display the desired
  * number of projects per row
- * @param {Number} perRow - projects to display per row
+ * @param {Number} perRow			projects to display per row
  */
 function assignLastInRow(perRow){
 	$.each($('.projPic'), function(index, project){
@@ -185,5 +257,95 @@ function assignLastInRow(perRow){
 			$(project).removeClass('lastInRow');
 		}
 
+	});
+}
+
+/*
+ * Displays the lightbox with the given id
+ * @param id		id of the lightbox to display
+ */
+function showLightbox(id){
+	var lightbox = $('#' + id);
+	$('#darkBack').css('display', 'block').click(function(){closeLightboxById(id)});
+  lightbox.css('display', 'block');
+	positionLightbox(lightbox);
+	positionImgSwitchArrows();
+}
+
+/**
+ * Centers lightbox on screen and positions close icon in upper right of box
+ * @param lightbox		the lightbox to position
+ */
+function positionLightbox(lightbox){
+
+	//position lightbox content
+	lightbox.css('max-height','100%');
+	lightbox.css('overflow-y','auto');
+	lightbox.css('height', lightbox.naturalHeight);
+	var boxHeight = lightbox.outerHeight();
+	var windowHeight = window.innerHeight;
+	if(boxHeight > windowHeight){
+		boxHeight = windowHeight - 30;	//-30 is to avoid some lightbox content being cut off at the bottom
+		lightbox.css('max-height', boxHeight);
+		lightbox.css('overflow-y', 'scroll');
+	}
+
+  var boxWidth = lightbox.outerWidth();
+  var top = (windowHeight - boxHeight) / 2;
+  var left = (window.innerWidth - boxWidth) / 2;
+	if (top < 0){
+		top = 0;
+	}
+  lightbox.css('top', top);
+  lightbox.css('left', left);
+
+  //position close icon
+  var closeIcon = lightbox.find('#closeIcon');
+  closeIcon.css('top', top - (closeIcon.outerHeight() - closeIcon.height())/2);
+  closeIcon.css('left', left + boxWidth - closeIcon.outerWidth());
+}
+
+/*
+ * Closes the lightbox with the given close icon
+ * @param xIcon		the X icon that was clicked
+ */
+function closeLightboxByIcon(xIcon){
+  var lightbox = $(xIcon).parent();
+  lightbox.css('display', 'none');
+  $('#darkBack').css('display', 'none');
+	resetImg(lightbox.attr('id'));
+}
+
+/*
+ * Closes the lightbox with the matching id
+ * @param id		the id of the lightbox to close
+ */
+function closeLightboxById(id){
+  $("#" + id).css('display', 'none');
+  $('#darkBack').css('display', 'none');
+	resetImg(id);
+}
+
+/**
+ * Returns the source of a project image to the first project image if it had several
+ * @param id		the id of the lightbox to reset the image of
+ */
+function resetImg(id){
+	$.getJSON( 'data.json', function( data ) {
+		$.each( data.projects, function(index, project) {
+			if(project.id == id){
+				var image = $("div#" + id + " img.projDetailsImg");
+				var imgLoc = 'assets/';
+				if(project.folder !== null){
+					imgLoc += project.folder + '/';
+				}
+				image.attr('src', imgLoc + project.images[0]);
+
+				var lArrow = $('div#' + lightboxId + ' img.lArrow');
+				if(lArrow.length > 0){		//if has arrows
+					lArrow.css('visibility','hidden');
+				}
+			}
+		});
 	});
 }

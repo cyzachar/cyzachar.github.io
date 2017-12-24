@@ -120,6 +120,19 @@ div#container{
 			margin: 0;
 		}
 
+		div.myLightbox{
+			position: fixed;
+			background-color: #DFCFB4 !important; /*tan*/
+			width: 90%;
+			margin: auto;
+			padding: 2%;
+			overflow-y: scroll;
+		}
+
+		div.hide{
+			display: none;
+		}
+
 	footer{
 		font-size: .8em;
 		clear: both;
@@ -189,9 +202,16 @@ div#container{
 		margin: 2em 0 .5em;
 	}
 
+	div#pptInfo img{
+		float: none;
+		padding: 0 2% 2% 0;
+		width: 100%;
+	}
+
 	/*PROJECTS*/
 	a.webProjLink:hover img, img.projPic:hover{
 		opacity: 0.6;
+		cursor: pointer;
 	}
 
 	img.projPic{
@@ -204,9 +224,8 @@ div#container{
 			padding-right: 0;
 		}
 
-	div.featherlight-content{
-		background-color: #DFCFB4 !important; /*tan*/
-		width: 90%;
+	div.featherlight-content {
+    background-color: #DFCFB4 !important;
 	}
 
 		div.dirLightbox div.featherlight-content{
@@ -225,30 +244,46 @@ div#container{
 				margin: 0 0 0 4%;
 			}
 
-	div.lightbox, div.hide{
-		display: none;
-	}
-
-		div.lightbox img{
-			float: none;
-			padding: 0 2% 2% 0;
-			width: 100%;
+		div.projImgDiv img.rArrow, div.projImgDiv img.lArrow{
+			float: left;
+			width: 3%;
+			margin: 0% 2%;
+			cursor: pointer;
 		}
 
-			div#walters img{
+			div.myLightbox img.projDetailsImg{
 				float: left;
-				width: 40%;
+				padding: 0 0 2% 0;
+				width: 100%;
 			}
+
+			div#walters div.projImgDiv{
+				width: 80%;
+				margin: auto;
+			}
+
+				div#walters div.projImgDiv img.projDetailsImg{
+					width: 80%;
+				}
+
+				div#walters div.projImgDiv img.rArrow, div#walters div.projImgDiv img.lArrow{
+					width: 4%;
+					margin: 0% 3%;
+				}
+
+		div#winForm div.projImgDiv img.projDetailsImg{
+			width: 86%;
+		}
 
 		div.projDescript{
 			display: block;
-			float: none;
+			float: left;
 			width: 100%;
+			padding-left:2%;
 		}
 
-			div.waltersLightbox div.featherlight-content div.projDescript{
-				float: left;
-				width: 60%;
+			div#walters div.projDescript{
+				width: 100%;
 			}
 
 			div.projDescript h3{
@@ -276,6 +311,30 @@ div#container{
 				div.projDescript button:hover{
 					cursor: pointer;
 				}
+
+	div#darkBack{
+	  position:fixed;
+	  top:0;
+	  left:0;
+	  width:100%;
+	  height:100%;
+	  background-color: black;
+	  opacity: .8;
+	  text-align:center;
+		cursor: pointer;
+	}
+
+	.hide{
+		display: none;
+	}
+
+	div h4#closeIcon{
+		position: fixed;
+		font-size: 2em;
+		margin: 0;
+		padding: 5px;
+		cursor: pointer;
+	}
 
 	/*SKILLS*/
 	div.skills h3{
@@ -350,14 +409,27 @@ div#container{
 		width: 32%;
 	}
 
-	div#winForm img{
+	div#winForm div.projImgDiv{
 		float: left;
-		width: 60%;
+		width: 44%;
 	}
 
-	div.winFormLightbox div.featherlight-content div.projDescript{
+		div#winForm div.projImgDiv img.projDetailsImg{
+			float: left;
+		}
+
+	div#winForm div.projDescript{
 		float: left;
-		width: 40%;
+		width: 54%;
+	}
+
+	div#walters div.projImgDiv{
+		float: left;
+		width: 34%;
+	}
+
+	div#walters div.projDescript{
+		width: 64%;
 	}
 
 }
@@ -375,27 +447,32 @@ div#container{
 		margin: auto;
 	}
 
-	div.featherlight-content{
+	div.myLightbox{
 		width: 90%;
 	}
 
-		div.winFormLightbox div.featherlight-content{
-			width: 60%;
-		}
-
-		div.waltersLightbox div.featherlight-content{
-			width: 50%;
-		}
-
-		div.lightbox img{
+		div#pptInfo img{
 			float: left;
 			padding: 0 2% 0 0;
 			width: 50%;
 		}
 
-			div#walters img{
-				width: 40%;
-			}
+		div#pptInfo h3{
+			margin-top: 0;
+		}
+
+		div#winForm{
+			width: 60%;
+		}
+
+		div#walters{
+			width: 50%;
+		}
+
+		div.myLightbox div.projImgDiv{
+			float: left;
+			width: 48%;
+		}
 
 		div.projDescript{
 			display: block;
@@ -403,9 +480,6 @@ div#container{
 			width: 50%;
 		}
 
-			div.waltersLightbox div.featherlight-content div.projDescript{
-				width: 60%;
-			}
 }
 
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 1000PX------------------------------------------------------------------*/

@@ -16,6 +16,12 @@
 				if(jQuery.browser.mobile){
 					$("#hoverPrompt").remove();
 				}
+
+				$(window).resize(function() {
+					if($('#pptInfo').css('display') == "block"){
+						positionLightbox($('#pptInfo'));
+					}
+				});
       });
     </script>
 	</head>
@@ -39,7 +45,7 @@
 				<div id = "portraitContainer">
 					<div id = "portraits">
 						<img id = "bottomPortrait" src = "assets/me.jpg" alt = "Cynthia Zachar"/>
-						<a href="#" data-featherlight="#pptInfo">
+						<a href="#" onclick = "showLightbox('pptInfo')">
 							<img id = "topPortrait" onmouseover = "showPptMe()" onmouseout = "hidePptMe()" src = "assets/ppt_me_i.png" alt = "Cynthia Zachar"/>
 						</a>
 						<img id = "hoverPrompt" src = "assets/hover.png" alt = "Hover here"/>
@@ -48,7 +54,7 @@
 				<div>
 					<h2>Overview</h2>
 					<p>
-						I'm a fourth year Information Technology and Human-Centered Computing student at the Rochester Institute of Technology.
+						I'm a third year Information Technology and Human-Centered Computing student at the Rochester Institute of Technology.
 						But if you've checked out my <a class = "outsideInfo" href = "https://www.linkedin.com/in/cynthia-zachar-2112b2a2">LinkedIn profile</a> or my <a class = "outsideInfo" href = "https://www.dropbox.com/s/u170ozv3sqywgej/Zachar_Cynthia_Resume_IT.docx?dl=0">resume</a>, you already know that.
 						The purpose of this website is not to present the same information in a different format, but to give you a better idea of who I am and what kind of experience I have.
 					</p>
@@ -56,10 +62,14 @@
 				<div id = "rightNow">
 					<h3>Right now...</h3>
 					<p>
-						I'm beginning my fall semester of classes at RIT and considering internships for next summer (2018).
+						I'm working on some projects over winter break and looking for an internship for next summer (2018).
 					</p>
 				</div>
-				<div id = "pptInfo" class = "lightbox">
+				<div id = "darkBack" class = "hide">
+	        <!--dark, translucent background behind lightbox-->
+	      </div>
+				<div id = "pptInfo" class = "myLightbox hide">
+					<h4 id="closeIcon" onclick="closeLightboxByIcon(this)">x</h4>
 					<img src = "assets/pptAnimals.png" src = "PowerPoint Illustrations of Animals"/>
 					<h3>An Unusual Skill: PowerPoint Illustration</h3>
 					<p>
