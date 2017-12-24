@@ -411,7 +411,7 @@ div#container{
 
 	div#winForm div.projImgDiv{
 		float: left;
-		width: 44%;
+		width: 54%;
 	}
 
 		div#winForm div.projImgDiv img.projDetailsImg{
@@ -420,16 +420,16 @@ div#container{
 
 	div#winForm div.projDescript{
 		float: left;
-		width: 54%;
+		width: 44%;
 	}
 
 	div#walters div.projImgDiv{
 		float: left;
-		width: 34%;
+		width: 40%;
 	}
 
 	div#walters div.projDescript{
-		width: 64%;
+		width: 58%;
 	}
 
 }
@@ -466,7 +466,7 @@ div#container{
 		}
 
 		div#walters{
-			width: 50%;
+			width: 60%;
 		}
 
 		div.myLightbox div.projImgDiv{
@@ -492,6 +492,10 @@ div#container{
 	div#portraits img#hoverPrompt{
 		left: -80px;
 		top: 20px;
+	}
+
+	div#walters{
+		width: 50%;
 	}
 
 }
