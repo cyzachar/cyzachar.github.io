@@ -110,16 +110,18 @@ function loadProjects(){
 			descript.append(skills);
 
 			/*button*/
-			var buttonLink = $('<a></a>');
-			if(project.directionHead == null){		//project is website
-				buttonLink.attr('href', project.link).attr('target','_blank');
+			if(project.buttonText != null){
+				var buttonLink = $('<a></a>');
+				if(project.directionHead == null){		//project is website
+					buttonLink.attr('href', project.link).attr('target','_blank');
+				}
+				else{																	//project requires directions/download
+					buttonLink.attr('href','#').attr('data-featherlight',project.id + "Dir").attr('data-featherlight-variant','dirLightbox');
+				}
+				var button = $('<button></button>').text(project.buttonText).attr('type','button');
+				buttonLink.append(button);
+				descript.append(buttonLink);
 			}
-			else{																	//project requires directions/download
-				buttonLink.attr('href','#').attr('data-featherlight',project.id + "Dir").attr('data-featherlight-variant','dirLightbox');
-			}
-			var button = $('<button></button>').text(project.buttonText).attr('type','button');
-			buttonLink.append(button);
-			descript.append(buttonLink);
 
 			/*directions*/
 			if(project.directionHead !== null){

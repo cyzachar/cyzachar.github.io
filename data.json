@@ -1,29 +1,6 @@
 {
   "projects": [
     {
-      "id": "designPsych",
-      "name": "Web I Psychology of Design Website",
-      "icon": "designPsych.png",
-      "folder": null,
-      "images": [
-        "designPsych_full_screen.png"
-      ],
-      "description": [
-        "The final project for my Web I class was to create a website on a topic of our choice. I chose the psychology of design and pulled the color scheme for the website from an image of a peacock feather (which is also the site's favicon).",
-        "A description of some of the features of the website may be found on the resources page. The most interesting of these features may be found at the bottom of the color page where I used an image map and JavaScript to display different information based on the user's choice."
-      ],
-      "directionHead": null,
-      "directions": [],
-      "link": "http://people.rit.edu/~cmz6274/140/project3/index.html",
-      "linkType": "",
-      "buttonText": "See the Website",
-      "skills": [
-        "HTML5",
-        "CSS3",
-        "JavaScript"
-      ]
-    },
-    {
       "id": "mackinac",
       "name": "Mackinac Island Website",
       "icon": "mackinac.png",
@@ -181,6 +158,50 @@
       "skills": [
         "Angular.js",
         "Ionic Framework"
+      ]
+    },
+    {
+      "id": "loudSensor",
+      "name": "Loudness Alert",
+      "icon": "loudnessAlert.png",
+      "folder": null,
+      "images": [
+        "loudnessAlert.png"
+      ],
+      "description": [
+        "This project, which was my final project for a wearable and ubiquitous computing course, involved programming a LightBlue Bean+ to receive readings from a loudness sensor, display the loudness level on an LED bar, and activate a vibration motor when the surroundings reached a certain loudness threshold.  The device is also able to share loudness data with a JavaScript server, which displays loudness levels over time as a bar chart on a webpage.  From the webpage, the user can control how frequently the LightBlue Bean+ provides an updated reading and can pause or restart the reading updates."
+      ],
+      "directionHead": null,
+      "directions": [],
+      "link": "",
+      "linkType": "",
+      "buttonText": null,
+      "skills": [
+        "Arduino Programming",
+        "HTML/CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "usau",
+      "name": "USAU Website Analysis",
+      "icon": "usauAnalysis.png",
+      "folder": "",
+      "images": [
+        "usauAnalysis.png"
+      ],
+      "description": [
+        "This projected started off as a class project for a prototyping and usability testing class.  I had to pick and analyze a design problem, develop a low-fidelity prototype of a solution, test the prototype on prospective users, refine the prototype, develop a higher fidelity version (using InVision), and test once more.  I chose to look at the USAU (USA Ultimate [Frisbee]) website with an original scope of the member portal.  Upon reaching out and receiving a response that USAU would be interested in seeing my results, I broadened the scope to include the entire website, surveyed just under 600 members of the Ultimate community, and continued to work on the analysis following the end of the semester.  The link below will take you to a work-in-progress website that displays the results of my work.  I will keep it updated as I complete more work on it.  The headers should give a sense of the content to come."
+      ],
+      "directionHead": null,
+      "directions": [],
+      "link": "",
+      "linkType": "",
+      "buttonText": null,
+      "skills": [
+        "Research",
+        "Statistical Analysis",
+        "UX"
       ]
     }
   ],
