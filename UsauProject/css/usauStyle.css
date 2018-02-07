@@ -10,9 +10,13 @@ div#content{
 }
 
   section{
-    display: inline;
+    display: inline-block;
     clear: both;
   }
+
+    section#futureWork{
+      display: inline;
+    }
 
 div#header{
   background-color: #00979C;  /*turquoise*/
