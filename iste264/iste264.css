@@ -31,6 +31,7 @@ h1{
 
 h2{
   color: #88062A;
+  clear: both;
 }
 
 p, li{
@@ -115,3 +116,14 @@ footer{
   clear: both;
   padding-top: 2%;
 }
+
+  nav ul{
+    list-style-type: none;
+    padding: 0;
+  }
+
+    nav ul li{
+      display: inline;
+      float: left;
+      padding-right: 2%;
+    }
