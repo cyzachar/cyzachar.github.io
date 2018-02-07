@@ -130,6 +130,10 @@ p, li{
     padding: 0 1%;
   }
 
+  p a{
+    color: #00979C;
+  }
+
 div.halfCol{
   display: block;
   float: left;
