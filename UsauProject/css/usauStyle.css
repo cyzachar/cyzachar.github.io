@@ -1,0 +1,196 @@
+body{
+  background-color: #EDEDED;  /*light gray*/
+}
+
+div#content{
+  background-color: white;
+  width: 70%;
+  margin: auto;
+  padding: 5% 2% 2%;
+}
+
+  section{
+    display: inline;
+    clear: both;
+  }
+
+div#header{
+  background-color: #00979C;  /*turquoise*/
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  margin: -1% -1% 0;
+  padding: 1% 1% 0.5% 1.5%;
+  box-shadow: 2px 2px 2px gray;
+}
+
+  div#header img#logo{
+    width: 30%;
+    float: left;
+    margin-right: 4%;
+  }
+
+  nav ul{
+    list-style-type: none;
+    margin-top: 2.5%;
+  }
+
+    nav ul li{
+      color: white;
+      font-size: 16pt;
+      font-weight: semibold;
+      float: left;
+    }
+
+    nav ul li:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    nav ul li.navDivider:hover{
+      text-decoration: none;
+    }
+
+img.chart{
+  width: 70%;
+}
+
+div.roleChart{
+  float: left;
+  width: 13%;
+  padding: 0 1% 1% 0;
+}
+
+  div.roleChart img{
+    width: 100%;
+  }
+
+  div.roleChart p{
+    text-align: center;
+  }
+
+h2{
+  color: #4E79A7; /*dark blue*/
+  clear: both;
+  padding: 1em 0 0;
+  margin: 0;
+}
+
+div.headerIconDiv{
+  margin: 1em 0 0;
+  clear: both;
+}
+
+  div.headerIconDiv h2{
+    display: block;
+    float: left;
+    clear: none;
+    padding: 0 1% 0 0;
+  }
+
+  div.headerIconDiv h3{
+    display: block;
+    float: left;
+    clear: none;
+    margin: 0;
+    padding: 0 1% 0 0;
+  }
+
+  img.moreIcon, img.aboutIcon{
+    width: 25px;
+    cursor: pointer;
+  }
+
+  img.sampleIcon{
+    width: 16px;
+  }
+
+h3{
+  color: #333333;
+  clear: both;
+  margin: 1% 0;
+}
+
+ul{
+  margin: 0;
+}
+
+p, li{
+  color: #3F3F3F; /*dark gray*/
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+}
+
+  li.navDivider{
+    float: left;
+    padding: 0 1%;
+  }
+
+div.halfCol{
+  display: block;
+  float: left;
+  padding-right: 10%;
+}
+
+  p.changeName{
+    display: block;
+    color: #59A34E;   /*light orange*/
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1em 0 0 0;
+  }
+
+  p.changeName:hover{
+    color: #0D5702;   /*dark orange*/
+  }
+
+div.lightbox{
+  background-color: #EDEDED;  /*light gray*/
+}
+
+.hide{
+  display: none;
+}
+
+.toDo{
+  color: red;
+  font-size: 12pt;
+}
+
+.popup{
+  display: none;
+  position: absolute;
+  background-color: #FFFFAC;  /*light yellow*/
+  width: 30%;
+  padding: 1%;
+  box-shadow: 2px 2px 2px gray;
+}
+
+div#overviewTxt{
+  width: 62%;
+  float: left;
+}
+
+  div#overviewTxt p{
+    float: left;
+    text-indent: 40px;
+    padding-bottom: 1%;
+  }
+
+div#thanks{
+  display: block;
+  background-color: #FFFAFF;
+  border: 2px solid #E5AED5;
+  border-radius: 10px;
+  padding: 0.2% 1% 1%;
+  margin-left: 2%;
+  width: 33%;
+  float: left;
+}
+
+footer{
+  background-color: #3F3F3F; /*dark gray*/
+  color: white;
+  padding:  1% 2%;
+  margin: 0 -2.5% -2%;
+}

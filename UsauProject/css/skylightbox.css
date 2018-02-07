@@ -1,0 +1,48 @@
+/*
+  html should have the following:
+  => <div id = "darkBack" class = "hide"><!--dark, translucent background behind lightbox--></div>
+  => lightbox div w/ class "lightbox" and "hide"; must also have an id
+  => <h4 class="closeIcon" onclick="closeLightboxByIcon(this)">x</h4>
+  => element with an onclick of "showLightbox('_lightboxId_')"
+
+  in head:
+  <link href="skylightbox.css" type="text/css" rel="stylesheet" />
+*/
+
+div.lightbox{
+  position: fixed;
+  width: 90%;
+  margin: auto;
+  padding: 2%;
+  overflow-y: scroll;
+  z-index: 4;
+}
+
+div.hide{
+  display: none;
+}
+
+div#darkBack{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: black;
+  opacity: .8;
+  text-align:center;
+  cursor: pointer;
+  z-index: 3;
+}
+
+div h4.closeIcon{
+  position: fixed;
+  font-size: 2em;
+  margin: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.noScroll{
+  overflow: hidden;
+}

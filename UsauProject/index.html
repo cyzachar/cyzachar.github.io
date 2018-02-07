@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name = "description" content = "USA Ultimate Website Analysis by Cynthia Zachar">
+		<title>USAU Website Analysis</title>
+		<link rel = "shortcut icon" href = "assets/favicon.png">
+		<link href="css/skylightbox.css" type="text/css" media = "screen" rel="stylesheet" />
+		<link href = "css/usauStyle.css" type = "text/css" media = "screen" rel = "stylesheet"/>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type = "text/javascript" src = "js/skylightbox.js"></script>
+		<script type = "text/javascript" src = "js/script.js"></script>
+		<script>
+		$(document).ready(function(){
+			prepareTableauFigures();
+		  $(window).resize(function() {
+		    handleResize();
+		  });
+		});
+		</script>
+	</head>
+	<body>
+		<div id = "container">
+			<div id = "header">
+				<img id = "logo" src = "assets/discLogo.png" alt = "usaultimate.org website analysis"/>
+				<nav>
+					<ul>
+            <li onclick="scrollToSection('overview')">Overview</li>
+						<li class = "navDivider">&bull;</li>
+            <li onclick="scrollToSection('sampleStats')">Sample Stats</li>
+						<li class = "navDivider">&bull;</li>
+            <li onclick="scrollToSection('results')">Results</li>
+						<li class = "navDivider">&bull;</li>
+            <li onclick="scrollToSection('recommendations')">Recommendations</li>
+						<li class = "navDivider">&bull;</li>
+            <li onclick="scrollToSection('futureWork')">Future Work</li>
+						<li class = "navDivider">&bull;</li>
+            <li onclick="scrollToSection('contact')">Contact</li>
+					</ul>
+				</nav>
+			</div>
+
+			<div id = "content">
+        <section id = "overview">
+          <h2>Overview & Scope</h2>
+					<div id = "overviewTxt">
+						<p>
+							For those unfamiliar with the organization, USAU (USA Ultimate) is the non-profit governing body for Ultimate Frisbee in the United States.
+							The <a href = "https://www.usaultimate.org" target = "_blank">USAU website</a> faces the challenge of organizing a large quantity and variety of information for users with differing needs, interests, and goals.
+							The website also keeps track of user, team, event, and community data and provides an interface that users will regularly interact with to stay engaged in a sport they love.
+							While the organization itself has been making strides toward growing the sport and improving the player experience, it seemed to me that the current website implementation did not effectively contribute to that goal.
+						</p>
+						<p>
+							This design problem started out as the focus of a Prototyping and Usability Testing class project with an initial scope of the member dashboard.
+							When I reached out to USAU and learned that they'd be interested in seeing the results of my work, I expanded the scope to include the entire website.
+							To get a better sense of the Ultimate community's thoughts on and experiences with the website, I drafted and shared a Google Forms survey.
+							The results are shared here with the main body providing main ideas and additional detail available if you click the
+							<img class = "sampleIcon" src = "assets/aboutIcon.png" alt = "Sample About Data Icon" title = "Sample About Data Icon"/>
+							 or
+							<img class = "sampleIcon" src = "assets/moreIcon.png" alt = "Sample See More Icon" title = "Sample See More Icon"/>
+							 icons next to headers.</p>
+						</div>	<!--End overview text-->
+					<div id = "thanks">
+						<h3>Thank you:</h3>
+						<ul>
+							<li>To everyone who completed and shared the survey.  I appreciate the time and thought that you put into your responses (also, the feedback on the survey questions).</li>
+							<li>To everyone interested in seeing the results for your patience as I delayed analysis for other obligations, pre-processed data, and combed through the longer text responses.</li>
+							<li>To my professor for the assistance with some frequency calculations and advice and feedback on my process</li>
+						</ul>
+					</div>
+        </section><!--end overview-->
+
+        <section id = "sampleStats">
+          <div class = "headerIconDiv">
+						<h2>Sample Statistics</h2>
+						<img class = "aboutIcon" src = "assets/aboutIcon.png" alt = "About Data" title = "About Data" onclick = "showLightbox('aboutSample')"/>
+						<img class = "moreIcon" src = "assets/moreIcon.png" alt = "See More" title = "See More" onclick = "showLightbox('sampleStatsMore')"/>
+					</div>
+					<p>I received a total of 598 survey submissions from 42 states (plus Washington DC and 3 Canadian provinces).  Responders have played Ultimate for an average of 9.5 years with a standard deviation of about 7.  The maximum number of years played was 47.</p>
+					<h3>Roles in Ultimate Community</h3>
+					<div class = "roleChart">
+						<img src = "assets/playerFreq.png" alt = "Player Frequency - 97%" title = "Player Frequency Pie Chart"/>
+						<p>Player</p>
+					</div>
+					<div class = "roleChart">
+						<img src = "assets/captainFreq.png" alt = "Team Captain Frequency - 43%" title = "Team Captain Frequency Pie Chart"/>
+						<p>Team Captain</p>
+					</div>
+					<div class = "roleChart">
+						<img src = "assets/fanFreq.png" alt = "Fan Frequency - 38%" title = "Fan Frequency Pie Chart"/>
+						<p>Fan</p>
+					</div>
+					<div class = "roleChart">
+						<img src = "assets/coachFreq.png" alt = "Coach Frequency - 33%" title = "Coach Frequency Pie Chart"/>
+						<p>Coach</p>
+					</div>
+					<div class = "roleChart">
+						<img src = "assets/volunteerFreq.png" alt = "Volunteer Frequency - 25%" title = "Volunteer Frequency Pie Chart"/>
+						<p>Volunteer</p>
+					</div>
+					<div class = "roleChart">
+						<img src = "assets/eventOrganizerFreq.png" alt = "Event Organizer Frequency - 22%" title = "Event Organizer Frequency Pie Chart"/>
+						<p>Event Organizer</p>
+					</div>
+					<div class = "roleChart">
+						<img src = "assets/observerFreq.png" alt = "Observer Frequency - 6%" title = "Observer Frequency Pie Chart"/>
+						<p>Observer</p>
+					</div>
+					<h3>Type of Events Paricipated In</h3>
+					<img class = "chart" src = "assets/eventTypeFrequency.png" alt = "event type frequency bar chart" title = "event type frequency bar chart"/>
+					<div id = "aboutSample" class = "about hide lightbox">
+						<h4 class="closeIcon" onclick="closeLightboxByIcon(this)">x</h4>
+						<h4>Recruiting Participants</h4>
+						<p>
+							I emailed local Ultimate organizations from about 40 states in addition to an unreasonable (in that it took me longer that I probably should have spent gathering email addresses) number of teams across divisions and states and requested that they pass on the survey to their players and members.
+							Some did pass it on (via newsletter in some cases), many did not.
+							The survey was posted in the Portland OR, Rochester NY (GRADA), and Pittsburgh PA Ultimate groups on Facebook and shared with the Mixed Club Ultimate Players and Women in Club Ultimate groups.
+							If it was shared elsewhere, I didn't learn of it.
+						</p>
+						<h4>A Note on the Data</h4>
+						<p>
+							Because I did not specifically ask for a city and state from the user, I had to make a few assumptions of state or settle for a nearby city when regions were given.
+							It's worth noting that involvement in an event could mean playing, coaching, etc.
+							Some may have omitted events that they coach for but don't compete in, and, for those who indicated both, I can't tell from responses which they compete in and which they coach.
+							Regarding years played, the number given may not have been an uninterrupted/continuous amount of time and regarding events played in, it's possible that some included past events in addition to current.
+						</p>
+						<h4>Observations on the Sample</h4>
+						<p>
+							Based on respondant roles, it's clear that the sample is not representative of the population of USAU website users, seeing as a much larger proportion of members would likely be simply players or players and fans.
+							However, such a distribution is good for the purpose of this analysis because those in positions of leadership or organization are likely to interact more frequently and with more areas of the website than the average player.
+						</p>
+					</div>
+					<div id = "sampleStatsMore"  class = "about hide lightbox">
+						<h4 class="closeIcon" onclick="closeLightboxByIcon(this)">x</h4>
+						<h3>Responses by State</h3>
+						<p class = "toCome">[Styling (figure size) and fixing occasional unexpected error work-in-progress]</p>
+						<div class='tableauPlaceholder' id='viz1513614270547' style='position: relative'>
+							<noscript>
+								<a href='#'>
+									<img alt='Survey Responses by State &amp; Region ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SurveyResponsesbyStateRegion&#47;Sheet1&#47;1_rss.png' style='border: none' />
+								</a>
+							</noscript>
+							<object class='tableauViz'  style='display:none;'>
+								<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+								<param name='embed_code_version' value='3' />
+								<param name='site_root' value='' />
+								<param name='name' value='SurveyResponsesbyStateRegion&#47;Sheet1' />
+								<param name='tabs' value='no' />
+								<param name='toolbar' value='yes' />
+								<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Su&#47;SurveyResponsesbyStateRegion&#47;Sheet1&#47;1.png' />
+								<param name='animate_transition' value='yes' />
+								<param name='display_static_image' value='yes' />
+								<param name='display_spinner' value='yes' />
+								<param name='display_overlay' value='yes' />
+								<param name='display_count' value='yes' />
+								<param name='filter' value='publish=yes' />
+							</object>
+						</div>
+
+						<h3>Responses by City</h3>
+						<p class = "toCome">[Styling (figure size) and fixing occasional unexpected error work-in-progress]</p>
+						<div class='tableauPlaceholder' id='viz1513614387971' style='position: relative'>
+							<noscript>
+								<a href='#'>
+									<img alt='USAU Survey Responses by City (updated) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USAUSurveyResponsesbyCity&#47;Sheet1&#47;1_rss.png' style='border: none' />
+								</a>
+							</noscript>
+							<object class='tableauViz'  style='display:none;'>
+								<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+								<param name='embed_code_version' value='3' />
+								<param name='site_root' value='' />
+								<param name='name' value='USAUSurveyResponsesbyCity&#47;Sheet1' />
+								<param name='tabs' value='no' />
+								<param name='toolbar' value='no' />
+								<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;USAUSurveyResponsesbyCity&#47;Sheet1&#47;1.png' />
+								<param name='animate_transition' value='yes' />
+								<param name='display_static_image' value='yes' />
+								<param name='display_spinner' value='yes' />
+								<param name='display_overlay' value='yes' />
+								<param name='display_count' value='yes' />
+							</object>
+						</div>
+					</div>	<!--end sample stats more lightbox-->
+        </section>	<!--end Sample Stats-->
+
+        <section id = "results">
+          <h2>Results</h2>
+					<h3>Action Frequencies</h3>
+					<div class='tableauPlaceholder' id='viz1516382359584' style='position: relative'>
+						<noscript>
+							<a href='#'>
+								<img alt='Average Action Frequency ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageActionFrequency&#47;Sheet1&#47;1_rss.png' style='border: none' />
+							</a>
+						</noscript>
+						<object class='tableauViz'  style='display:none;'>
+							<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+							<param name='embed_code_version' value='3' />
+							<param name='site_root' value='' />
+							<param name='name' value='AverageActionFrequency&#47;Sheet1' />
+							<param name='tabs' value='no' />
+							<param name='toolbar' value='no' />
+							<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageActionFrequency&#47;Sheet1&#47;1.png' />
+							<param name='animate_transition' value='yes' />
+							<param name='display_static_image' value='yes' />
+							<param name='display_spinner' value='yes' />
+							<param name='display_overlay' value='yes' />
+							<param name='display_count' value='yes' />
+							<param name='filter' value='publish=yes' />
+						</object>
+					</div>
+
+					<h3>News Interests</h3>
+					<img class = "chart" src = "assets/newsInterests.png"/>
+					<h3>News Sources</h3>
+					<img class = "chart" src = "assets/newsSource.png"/>
+					<h3>Event Tracking</h3>
+					<p class = "toCome">[Content to come]</p>
+					<h3>USAU App Usage</h3>
+					<p class = "toCome">[Content to come]</p>
+					<div class = "headerIconDiv">
+						<h3>Member Portal Content</h3>
+						<img class = "aboutIcon" src = "assets/aboutIcon.png" alt = "About Data" title = "About Data" onclick = "showLightbox('aboutPortalContent')"/>
+					</div>
+					<p>Category of content is followed by the number of times it was mentioned.  Subcategories indicate the number of times specific details were included to further refine the category.</p>
+					<p class = "toCome">[Organization work-in-progress]</p>
+					<ul>
+						<li>Events/Tournaments - 303
+							<ul>
+								<li>Calendar - 34</li>
+								<li>Upcoming - 157
+									<ul>
+										<li>I or my team is registered for - 45</li>
+										<li>Otherwise relevant to me (nearby, expressed interest, my division) - 41</li>
+									</ul>
+								</li>
+								<li>Current/Ongoing - 34</li>
+								<li>Recent Past - 76</li>
+								<li>Archive - 5</li>
+							</ul>
+						</li>
+						<li>My Teams - 98</li>
+						<li>Rankings - 94</li>
+						<li>News - 76</li>
+						<li>Account Info - 64</li>
+						<li>Action Items/Notifications - 46</li>
+						<li>Rostering/Team Management - 35</li>
+						<li>Division Info - 15</li>
+						<li>Rules - 10</li>
+					</ul>
+					<div id = "aboutPortalContent" class = "about hide lightbox">
+						<h4 class="closeIcon" onclick="closeLightboxByIcon(this)">x</h4>
+						<h4>A Note on the Data</h4>
+						<p>
+							These results are in response to the question "What would you like to see when you first log in to the member portal on the USAU website?".
+							Note that I revised this question from the original, "What would you like to see when you first log in on the USAU website?", following the 161st survey submission, after it became clear that many misunderstood the question as asking about the website home page.
+							This revision appeared to reduced (but not eliminate) misunderstandings.
+							When I analyzed, I eliminated the responses indicating clear misunderstanding but kept the ones for which I suspected misunderstanding but could not be sure.
+							I also ignored responses that described appearance/usability rather than content and those that were too vague for me to categorize (e.g. "Information").
+							Between these reductions and the responses that didn't answer the question, I was left with 496.
+						</p>
+						<h4>How I Analyzed</h4>
+						<p>
+							Language ambiguity and varying amounts of detail in responses made categorizing this information challenging.
+							I first categorized responses manually, creating new categories as new content was mentioned.
+							After I went through the data the first time, I revised my categories because the initial categories were too broad, overlapped, or resulted in some inconsistencies.
+							Then I re-categorized with the new labels and determined frequencies (avoiding double-counting responses that mentioned both upcoming and recent tournaments, for one example, as mentioning tournaments in general).
+							Because I had to use my judgement to interpret language using context and reasoning, it's possible that I sometimes miscategorized when it comes to what responders were really referring to.
+							It's also worth noting that I was often unable to distinguish when people wanted the desired content directly on the member page or wanted a link to it, as this was a detail that most omitted.
+							Some combination of content directly on the page with a link to more details would likely be optimal.
+						</p>
+					</div>
+
+					<h3>Frustrations</h3>
+					<p class = "toCome">[Content to come]</p>
+					<h3>Desired Changes</h3>
+					<p>The following are the common threads that emerged in response to the question "If you could change anything about the USAU website, what would it be?"  Hover over the categories for details.</p>
+					<div class = "halfCol">
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Navigation & organization</p>
+							<p class = "popup">The most common concern.  Navigation was described as unintuitive and requiring too many clicks or too much scrolling.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Responsiveness/Mobile-friendliness</p>
+							<p class = "popup">Ultimate players are often on-the-go and want easy access to tournament schedules, scores, and rosters from their phones.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Simplification & appearance</p>
+							<p class = "popup">Users describe the site as cluttered, busy, and outdated and would like to see fewer navigation options, less and larger text, and a clean, modern, and appealing look and feel.  Several point out that the current design doesn't leave a positive first impression.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Personalization</p>
+							<p class = "popup">Everyone wants what interests them to be front and center but interests vary between individuals.  To personalize the content, responders suggest the addition of features to favorite events, follow teams, and customize one's home page.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Searching</p>
+							<p class = "popup">Some described googling "usau" and their search terms to avoid using USAU's search features or navigation.  Responses describe the tournament search tool in particular as complicated and suggest improving the filters.  Users would also like to see a search feature for teams.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Team pages/archives</p>
+							<p class = "popup">Users would like to see all results for a team (including past seasons) in one place.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Public player profiles</p>
+							<p class = "popup">Users want to see not just team histories but player histories (past teams and events) on public profiles.</p>
+					</div>
+					<div class = "halfCol">
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Rules features</p>
+							<p class = "popup">Many responders wanted a search feature for rules.  It was also suggested that pictures, explanations by observers (via video), or a section to clarify questions accompany the rules.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Score reporter</p>
+							<p class = "popup">Several mentioned a preference for the older version of score reporter and many would like to see a simpler, speedier, and more user friendly version of the tool. Regarding performance, one event organizer described having to build extra time into the end of pool play and start of bracket play to allow for score updating.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Member portal</p>
+							<p class = "popup">Many would like to see a more apparent login area immediately upon accessing the website.  This was also frequently mentioned for the member portal content question (when the question was misinterpreted as asking for what they'd like to see on the home page).  Users would like to see a more intuitive member dashboard and a more streamlined membership renewal process (e.g. including waiver signing).</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Rostering</p>
+							<p class = "popup">The team and event roster-building process was described as unintuitive and cumbersome.  Some would like to see one team entity that keeps tracks of previous and current rosters rather than different entities for each year. One team manager described players signing up for a team from a previous year.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Appealing to an audience</p>
+							<p class = "popup">Many players want to see content that's timely and relevant to them first (e.g. upcoming deadlines, current rankings) while others mention making the home page more welcoming/appealing to new players and the general public.  The latter group advocates for showing Ultimate in action and story-telling.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Non-USAU Events</p>
+							<p class = "popup">Users would like non-USAU (unsanctioned) events, scores, and rankings to be processed and displayed by the website.</p>
+						<p class = "changeName" onmouseover="showPopup(this)" onmouseout="hidePopup(this)">Miscellaneous</p>
+							<p class = "popup">For how specific this feedback is, quite a few people mentioned removing the JavaScript scrolling modules for news and events (describing it as "behemoth" in one case).  The opening of new tabs when links are clicked also irritated several people.  Websites that were mentioned as potential models for USAU were the MLU's old site, Ultimate Central, ESPN, US Soccer, and US Rugby.</p>
+					</div>
+				</section><!--End results-->
+
+        <section id = "recommendations">
+          <h2>Recommendations - more detail to come...</h2>
+					<h3>Prioritize Navigation</h3>
+					<h3>Craft a Smarter, Personalized UX</h3>
+					<h3>Refine Some Processes</h3>
+					<h3>Revise the Landing Page</h3>
+					<h3>Support Function with Form</h3>
+					<h3>Utilize the Community</h3>
+        </section>
+
+        <section id = "futureWork">
+          <h2>Future Work</h2>
+					<h3>Navigation Proposal</h3>
+					<h3>Member Dashboard Prototype</h3>
+					<h3>Event Search Sketch</h3>
+        </section>
+
+				<footer>Cynthia Zachar &copy; 2018</footer>
+
+			</div>	<!--end content div-->
+			<div id = "darkBack" class = "hide">
+				<!--dark, translucent background behind lightbox-->
+			</div>
+		</div>	<!--end container div-->
+	</body>
+</html>
