@@ -271,7 +271,7 @@ div#container{
 					margin: 0% 3%;
 				}
 
-		div#winForm div.projImgDiv img.projDetailsImg{
+		div#winForm div.projImgDiv img.projDetailsImg, div#loudSensor div.projImgDiv img.projDetailsImg{
 			width: 86%;
 		}
 

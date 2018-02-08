@@ -347,6 +347,7 @@ function resetImg(id){
 				if(lArrow.length > 0){		//if has arrows
 					lArrow.css('visibility','hidden');
 				}
+				$('div#' + lightboxId + ' img.rArrow').css('visibility','visible');	//make sure right arrow visible
 			}
 		});
 	});
