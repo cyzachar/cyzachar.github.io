@@ -171,13 +171,13 @@
         "graphDemo.jpg"
       ],
       "description": [
-        "This project, which was my final project for a wearable and ubiquitous computing course, involved programming a LightBlue Bean+ to receive readings from a loudness sensor, display the loudness level on an LED bar, and activate a vibration motor when the surroundings reached a certain loudness threshold.  The device is also able to share loudness data with a JavaScript server, which displays loudness levels over time as a bar chart on a webpage.  From the webpage, the user can control how frequently the LightBlue Bean+ provides an updated reading and can pause or restart the reading updates."
+        "This project, which was my final project for a wearable and ubiquitous computing course, involved programming a LightBlue Bean+ to receive readings from a loudness sensor, display the loudness level on an LED bar, and activate a vibration motor when the surroundings reached a certain loudness threshold.  The device is also able to share loudness data with a JavaScript server, which displays loudness levels over time as a histogram on a webpage.  From the webpage, the user can control how frequently the LightBlue Bean+ provides an updated reading and can pause or restart the reading updates."
       ],
       "directionHead": null,
       "directions": [],
-      "link": "",
+      "link": "loudnessAlert/index.html",
       "linkType": "",
-      "buttonText": null,
+      "buttonText": "See the Instructable",
       "skills": [
         "Arduino Programming",
         "HTML/CSS",
