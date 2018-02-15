@@ -77,13 +77,15 @@ function loadProjects(){
 			}
 			var newImg = $('<img>').addClass('projDetailsImg').attr('src', imgLoc + project.images[0]).attr('alt', project.name).attr('title', project.name);
 			if(project.images.length > 1){
+				var imgNum = $('<p></p>').text("(1 of " + project.images.length + ")").addClass('numOfImg');
 				var lArrow = $('<img>').addClass('lArrow').attr('src', 'assets/lArrow.png').attr('alt', 'left arrow').attr('title', 'left arrow').css('visibility','hidden');
-				lArrow.click(function(){switchImg(newImg, -1, project.images, lArrow, rArrow, index)});
+				lArrow.click(function(){switchImg(newImg, -1, project.images, lArrow, rArrow, imgNum)});
 				projImgDiv.append(lArrow);
 				projImgDiv.append(newImg);
 				var rArrow = $('<img>').addClass('rArrow').attr('src', 'assets/rArrow.png').attr('alt', 'right arrow').attr('title', 'right arrow');
-				rArrow.click(function(){switchImg(newImg, 1, project.images, lArrow, rArrow)});
+				rArrow.click(function(){switchImg(newImg, 1, project.images, lArrow, rArrow, imgNum)});
 				projImgDiv.append(rArrow);
+				projImgDiv.append(imgNum);
 			}
 			else{
 				projImgDiv.append(newImg);
@@ -156,19 +158,21 @@ function loadProjects(){
 
 /**
  * Switches source of project image based on a user-selected direction
- * @param image			the image to change
- * @param direction	1 to indicate right or -1 to indicate left
+ * @param image				the image to change
+ * @param direction		1 to indicate right or -1 to indicate left
  * @param imgArr			array of img srcs for the projects
  * @param lArrow			the left arrow that accompanies the image
  * @param rArrow			the right arrow that accompanies the image
+ * @param imgNum			the p tag that gives image number out of number of images
  */
-function switchImg(image, direction, imgArr, lArrow, rArrow){
+function switchImg(image, direction, imgArr, lArrow, rArrow, imgNum){
 	var splitSrc = image.attr('src').split('/');
 	var imgName = splitSrc[splitSrc.length - 1];
 	var curIndex = imgArr.indexOf(imgName);
 	var newIndex = curIndex + direction;
 	lArrow.css('visibility','visible');
 	rArrow.css('visibility','visible');
+	imgNum.text("(" + (newIndex + 1) + " of " + imgArr.length + ")");
 
 	if(newIndex == 0){
 		lArrow.css('visibility','hidden');
@@ -267,6 +271,7 @@ function assignLastInRow(perRow){
  * @param id		id of the lightbox to display
  */
 function showLightbox(id){
+	$('body').addClass('noScroll'); //disable scroll for content behind lightbox
 	var lightbox = $('#' + id);
 	$('#darkBack').css('display', 'block').click(function(){closeLightboxById(id)});
   lightbox.css('display', 'block');
@@ -316,6 +321,7 @@ function closeLightboxByIcon(xIcon){
   lightbox.css('display', 'none');
   $('#darkBack').css('display', 'none');
 	resetImg(lightbox.attr('id'));
+	$('body').removeClass('noScroll'); //re-enable scroll for content behind lightbox
 }
 
 /*
@@ -326,6 +332,7 @@ function closeLightboxById(id){
   $("#" + id).css('display', 'none');
   $('#darkBack').css('display', 'none');
 	resetImg(id);
+	$('body').removeClass('noScroll'); //re-enable scroll for content behind lightbox
 }
 
 /**
@@ -342,6 +349,8 @@ function resetImg(id){
 					imgLoc += project.folder + '/';
 				}
 				image.attr('src', imgLoc + project.images[0]);
+
+				$("div#" + id + " p.numOfImg").text("(1 of " + project.images.length + ")");
 
 				var lArrow = $('div#' + lightboxId + ' img.lArrow');
 				if(lArrow.length > 0){		//if has arrows
