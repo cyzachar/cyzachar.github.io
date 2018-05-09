@@ -38,17 +38,35 @@ function navClickable(navBlock){
  * Switches from displaying photo to ppt illustration
  */
 function showPptMe(){
+	console.log("showPptMe")
 	$("#topPortrait").css("opacity", 1);
 	$("#bottomPortrait").css("opacity", 0);
-	$("#hoverPrompt").remove();
 }
 
 /**
  * Switches from displaying ppt illustration to photo
  */
 function hidePptMe(){
+	console.log("hidePptMe")
 	$("#topPortrait").css("opacity", 0);
 	$("#bottomPortrait").css("opacity", 1);
+}
+
+function animatePortrait(){
+	console.log("animatePortrait");
+	setTimeout(function(){
+	var prom = new Promise((resolve, reject) => {
+		showPptMe();
+		resolve();
+	});
+	prom.then((successMessage) => {
+		setTimeout(function(){
+			console.log("in timeout");
+			hidePptMe();
+		}, 6000);
+	});
+}, 6000);
+	setTimeout(animatePortrait, 12000);
 }
 
 /*

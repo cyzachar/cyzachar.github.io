@@ -13,9 +13,7 @@
 		<script type = "text/javascript" src = "js/script.js"></script>
 		<script>
       $(document).ready(function(){
-				if(jQuery.browser.mobile){
-					$("#hoverPrompt").remove();
-				}
+				animatePortrait();
 
 				$(window).resize(function() {
 					if($('#pptInfo').css('display') == "block"){
@@ -46,9 +44,8 @@
 					<div id = "portraits">
 						<img id = "bottomPortrait" src = "assets/me.jpg" alt = "Cynthia Zachar"/>
 						<a href="#" onclick = "showLightbox('pptInfo')">
-							<img id = "topPortrait" onmouseover = "showPptMe()" onmouseout = "hidePptMe()" src = "assets/ppt_me_i.png" alt = "Cynthia Zachar"/>
+							<img id = "topPortrait" src = "assets/ppt_me_i.png" alt = "Cynthia Zachar"/>
 						</a>
-						<img id = "hoverPrompt" src = "assets/hover.png" alt = "Hover here"/>
 					</div>
 				</div>
 				<div>

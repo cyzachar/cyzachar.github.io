@@ -161,10 +161,10 @@ div#container{
 			position: absolute;
 			left: 0;
 			width: 100%;
-			-webkit-transition: opacity 2s ease-in-out;
-			-moz-transition: opacity 2s ease-in-out
-			-o-transition: opacity 2s ease-in-out;
-			transition: opacity 2s ease-in-out;
+			-webkit-transition: opacity 0.1s ease-in-out;
+			-moz-transition: opacity 0.1s ease-in-out
+			-o-transition: opacity 0.1s ease-in-out;
+			transition: opacity 0.1s ease-in-out;
 			cursor: pointer;
 		}
 
@@ -175,15 +175,6 @@ div#container{
 		div#portraits img#bottomPortrait{
 			opacity:1;
 		}
-
-	div#portraits img#hoverPrompt{
-		position: relative;
-		left: -40px;
-		top: 10px;
-		height: 30px;
-		width: 100px;
-		opacity: .9;
-	}
 
 	p#inProgress{
 		color: #523611;
