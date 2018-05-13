@@ -34,39 +34,18 @@ function navClickable(navBlock){
 	window.location = navBlock.getElementsByTagName("a")[0].href;
 }
 
-/**
- * Switches from displaying photo to ppt illustration
- */
-function showPptMe(){
-	console.log("showPptMe")
-	$("#topPortrait").css("opacity", 1);
-	$("#bottomPortrait").css("opacity", 0);
-}
-
-/**
- * Switches from displaying ppt illustration to photo
- */
-function hidePptMe(){
-	console.log("hidePptMe")
-	$("#topPortrait").css("opacity", 0);
-	$("#bottomPortrait").css("opacity", 1);
-}
-
 function animatePortrait(){
-	console.log("animatePortrait");
+	let FADE_SPEED = 1500;
+	let TIME_BETWEEN_IMGS = 6000;
+
 	setTimeout(function(){
-	var prom = new Promise((resolve, reject) => {
-		showPptMe();
-		resolve();
-	});
-	prom.then((successMessage) => {
-		setTimeout(function(){
-			console.log("in timeout");
-			hidePptMe();
-		}, 6000);
-	});
-}, 6000);
-	setTimeout(animatePortrait, 12000);
+		$("#topPortrait").fadeIn(FADE_SPEED, function(){
+				setTimeout(function(){
+					$("#topPortrait").fadeOut(FADE_SPEED);
+				}, TIME_BETWEEN_IMGS);
+		});
+		animatePortrait();
+	}, TIME_BETWEEN_IMGS)
 }
 
 /*
