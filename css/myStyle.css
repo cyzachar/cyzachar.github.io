@@ -138,7 +138,8 @@ div#container{
 		}
 
 	footer{
-		font-size: .8em;
+		font-family: "Calling Cards", sans-serif;
+		font-size: .7em;
 		clear: both;
 		padding-top: 2%;
 	}
