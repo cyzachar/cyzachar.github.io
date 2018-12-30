@@ -20,36 +20,40 @@ function toggleExperience(which){
 	}
 }
 
-function positionNav(){
+function positionNav(isInitialLoad){
 	var header = $("#header");
 	var h1 = header.find("h1");
 	var nav = header.find("nav");
+
 	h1.css("width","auto");
 	h1.css("margin-right",".5em");
+
 	var navWidth = header.width() - h1.outerWidth(true);
 
 	var ul = nav.find("ul");
 	var allLi = ul.find("li");
 	var ulWidth = 0;
 	for(var i = 0; i < allLi.length; i++){
-		ulWidth += allLi.eq(i).outerWidth(true);
+		ulWidth += allLi.eq(i).outerWidth();
 	}
 	ul.width(ulWidth);
 
+	//if there's too little space for the nav items to be on same line as title
 	if(ulWidth > navWidth){
 		nav.css("width","auto");
 		nav.css("margin-top",0);
 		nav.css("float","none");
 		ul.css("float","none");
-		ul.css("margin","auto");
+		ul.css("margin","0 auto");
 		h1.css("width","100%");
 		h1.css("text-align","center");
 		h1.css("margin-right",0);
 	}
+	//nav items to right of title
 	else{
 		nav.width(navWidth);
 		nav.css("float","right");
-		nav.css("margin-top",h1.height() - nav.outerHeight() + "px");
+		nav.css("margin-top",h1.height() - nav.outerHeight());
 		ul.css("float","right");
 		h1.css("text-align","left");
 		h1.css("margin-right",".5em");

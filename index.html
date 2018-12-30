@@ -14,13 +14,16 @@
 		<script type = "text/javascript" src = "js/script.js"></script>
 		<script>
       $(document).ready(function(){
-				positionNav();
 				animatePortrait();
 				loadProjects();
 
+				setTimeout(function(){
+					positionNav(true);
+				},0.000001); //slightly delay positioning nav so it works properly
+
 				$(window).resize(function() {
 					handleResize();
-					positionNav();
+					positionNav(false);
 					if($('#pptInfo').css('display') == "block"){
 						positionLightbox($('#pptInfo'));
 					}

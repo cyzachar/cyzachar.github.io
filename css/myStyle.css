@@ -39,7 +39,7 @@ div#container{
 				font-family: 'Handsome Light', Arial, sans-serif;
 				font-size: 3em;
 				text-align: center;
-				margin: 0 .5em 0 0;
+				margin: 0;
 				width: 100%;
 			}
 
@@ -253,7 +253,7 @@ div#container{
 		}
 
 	div.featherlight-content {
-    background-color: #DFCFB4 !important;
+    background-color: white !important;
 	}
 
 		div.dirLightbox div.featherlight-content{
@@ -266,7 +266,7 @@ div#container{
 			}
 
 			div.dirLightbox div.featherlight-content ol{
-				color: #5C393E;		/*"van cleef" dark purple*/
+				color: black;
 				font-family: "Calling Cards", sans-serif;
 				padding: 0;
 				margin: 0 0 0 4%;
@@ -388,6 +388,7 @@ div#container{
 
 	h1{
 		font-size: 3.5em;
+		margin: 0 .5em 0 0;
 	}
 
 	nav ul li{
