@@ -20,7 +20,7 @@ function toggleExperience(which){
 	}
 }
 
-function positionNav(isInitialLoad){
+function positionNav(){
 	var header = $("#header");
 	var h1 = header.find("h1");
 	var nav = header.find("nav");
