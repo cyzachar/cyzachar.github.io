@@ -1,12 +1,8 @@
-/*Cynthia Zachar
-  Personal Website
-  January 2016*/
-
 /*COMMON TO ALL PAGES*/
 body{
-	background-color: #813223;		/*"Burnt Umber" - red-brown*/
+	background-color: white;
 	padding: 0;
-	margin: 1%;
+	margin: 0;
 }
 
 .noScroll{
@@ -15,122 +11,188 @@ body{
 
 div#container{
 	display: block;
+	margin-top: 6em;
+	padding: 5%;
 }
 
 	div#header{
-		display: block;
+		width: 90%;
+		position: fixed;
+		box-shadow: 1px 1px 10px grey;
+		padding: 1% 5%;
+		top: 0;
+		/*background-color: white;*/
+		background-image: url("../assets/dots.png");
+		background-repeat: repeat;
+		z-index: 2;
 	}
-
-		div#banner{
-			background-color: #523611;		/*brown*/
-			border-radius: 25px 25px 0 0;
-		}
 
 			/*h1 font*/
 			@font-face {
 				font-family: 'Handsome Light';
-				src: url('handsomelight.ttf') format('truetype');
+				src: url('fonts/handsomelight.ttf') format('truetype');
 			}
 
 			h1{
-				color: #F2A540;		/*orange: rgb(242,165,64)*/
+				display: inline-block;
+				color: #292927;
 				font-family: 'Handsome Light', Arial, sans-serif;
 				font-size: 3.5em;
 				text-align: center;
-				padding: 1% 0;
 				margin: 0;
+				width: 100%;
 			}
 
 		nav{
-			display: inline-block;
-			background-color: #0892B1; 		/*turquoise*/
-			width: 100%;
-			box-shadow: 0 2px 2px gray;
+			padding-bottom: .8em;
 		}
 
 			nav ul{
-				display: inline;
 				list-style-type: none;
 				margin: 0;
+				padding: 0;
 			}
 
 				nav ul li{
+					display: inline-block;
 					font-family: "Cicero Sans Negrita", sans-serif;
 					float: left;
-					padding: .5% 2%;
-					border-right: 2px solid #176D8A;	/*dark turquoise*/
-					border-bottom: 2px solid #0892B1; 	/*turquoise*/
+					padding: 0 1em 0 0;
+					font-size: 1.2em;
+					color: #0892B1; 		/*turquoise*/
+					cursor: pointer;
 				}
 
-					nav ul li a{
-						color: white;
-						background-color: #0892B1; 		/*turquoise*/
+					nav ul li a, nav ul li a i{
 						text-decoration: none;
-						font-weight: bold;
+						color: #0892B1;
 					}
 
-					nav ul li:hover a{
-						background-color: #176D8A;			/*dark turquoise*/
+					nav ul li:last-child{
+						padding-right: 0;
 					}
 
 					nav ul li:hover{
-						background-color: #176D8A;			/*dark turquoise*/
-						border-right: 2px solid #15657F;	/*darkest turquoise*/
-						border-bottom: 2px solid #15657F;	/*darkest turquoise*/
-						cursor: pointer;
+						text-decoration: underline;
 					}
-
-					nav ul li#curPage{
-						/*TO DO: something to indicate current page in nav*/
-					}
-	#content{
-		display: block;
-		background-color: #DFCFB4; /*tan*/
-		border-radius: 0 0 25px 25px;
-		padding: 2%;
-	}
 
 		@font-face {
 			font-family: 'Cicero Sans Negrita';
-			src: url('Cicero Sans Negrita.ttf') format('truetype');
+			src: url('fonts/Cicero Sans Negrita.ttf') format('truetype');
 		}
 
 		@font-face {
 			font-family: 'Calling Cards';
-			src: url('CallingCards.ttf') format('truetype');
+			src: url('fonts/CallingCards.ttf') format('truetype');
 		}
 
 		h2{
-			font-family: "Calling Cards", sans-serif;
-			text-align: center;
+			font-family: "Cicero Sans Negrita", sans-serif;
 			margin: 0;
+			color: #595959;
 		}
 
 		h3{
-			font-family: "Calling Cards", sans-serif;
+			font-family: "Cicero Sans Negrita", sans-serif;
+			color: #595959;
 		}
 
 		h4{
-			font-family: "Calling Cards", sans-serif;
-			text-indent: 1em;
+			font-family: "Cicero Sans Negrita", sans-serif;
+			color: #595959;
+			margin: 1% 0;
 		}
 
 		p{
-			color: #5C393E;		/*"van cleef" dark purple*/
-			font-family: "Calling Cards", sans-serif;
+			font-family: "Cicero Sans Negrita", sans-serif;
 			font-size: 14pt;
-			text-indent: 2em;
 			padding: 0 0 .2em;
 			margin: 0;
 		}
 
+		div.aboutText p{
+			padding: 0 0 .5em;
+		}
+
+		section{
+			display: inline-block;
+			margin-bottom: 5%;
+		}
+
+		section.role {
+		    clear: both;
+		    display: inline-block;
+				border: 2px lightgray solid;
+		    padding: 5%;
+		    border-radius: 25px;
+		}
+
+		section.role:last-child {
+		    margin-bottom: 0;
+		}
+
+			section.role h3{
+				font-size: 2em;
+				margin: 0 0 1%;
+				text-align: center;
+			}
+
+			section.role h4{
+				font-size: 1.3em;
+			}
+
+			section.role img {
+					width: 80%;
+					margin: auto;
+					display: block;
+			}
+
+			section.role p.seeMore {
+			    color: #0892B1;
+			    margin-top: 2%;
+			    cursor: pointer;
+			}
+
+				section.role p.seeMore:hover {
+				    text-decoration: underline;
+				}
+
+			section.role div.moreRole {
+			    background-color: #e4e8e9;
+			    clear: both;
+			    padding: 5%;
+			    margin: 5% -5% -5%;
+					display: none; /*should be inline-block when displayed*/
+			    border-radius: 0 0 25px 25px;
+					width: 100%;
+			}
+
+			section.role div.moreRole h4 {
+			    margin: 0 0 1%;
+			}
+
+			section.role div.moreRole ul {
+			    margin: 0;
+			    padding-left: 5%;
+			    font-family: "Cicero Sans Negrita", sans-serif;
+			}
+
+				section.role div.moreRole li {
+				    padding-bottom: .5%;
+				}
+
+					section.role div.moreRole li:last-child {
+					    padding-bottom: 0;
+					}
+
 		div.myLightbox{
 			position: fixed;
-			background-color: #DFCFB4 !important; /*tan*/
+			background-color: white;
 			width: 90%;
 			margin: auto;
 			padding: 2%;
 			overflow-y: scroll;
+			z-index: 4;
 		}
 
 		div.hide{
@@ -138,18 +200,17 @@ div#container{
 		}
 
 	footer{
-		font-family: "Calling Cards", sans-serif;
-		font-size: .7em;
+		font-family: "Cicero Sans Negrita", sans-serif;
+		font-size: .8em;
 		clear: both;
 		padding-top: 2%;
+		color: #595959;
 	}
 
-	/*HOME*/
 	div#portraitContainer{
 		display: block;
-		width: 70%;
-		max-width: 250px;
-		min-height: 250px;
+		width: 244px;
+    height: 282px;
 		margin: 0 auto 2% auto;
 	}
 
@@ -169,27 +230,6 @@ div#container{
 			display: none
 		}
 
-	p#inProgress{
-		color: #523611;
-		background-color: white;
-		text-indent: 0;
-		padding: .5%;
-		margin: -2% -2% 2% -2%;
-	}
-
-	a.outsideInfo, a.outsideInfo:visited, div.dirLightbox div.featherlight-content ol a{
-		color: #607D7D;		/*dark turquoise*/
-		text-decoration: none;
-	}
-
-	a.outsideInfo:hover, div.dirLightbox div.featherlight-content ol a:hover{
-		text-decoration: underline;
-	}
-
-	div#rightNow h3{
-		margin: 2em 0 .5em;
-	}
-
 	div#pptInfo img{
 		float: none;
 		padding: 0 2% 2% 0;
@@ -205,11 +245,11 @@ div#container{
 	img.projPic{
 		float: left;
 		width: 100%;
-		padding: 5% 0 0 0;
+		margin: 5% 0 0 0;
 	}
 
 		img.projPic.lastInRow{
-			padding-right: 0;
+			margin-right: 0;
 		}
 
 	div.featherlight-content {
@@ -249,8 +289,9 @@ div#container{
 
 			div.myLightbox img.projDetailsImg{
 				float: left;
-				padding: 0 0 2% 0;
+				margin: 0 0 2% 0;
 				width: 100%;
+				border: 1px lightgray solid;
 			}
 
 			div#walters div.projImgDiv{
@@ -259,7 +300,7 @@ div#container{
 			}
 
 				div#walters div.projImgDiv img.projDetailsImg{
-					width: 80%;
+					width: 79%;	/*was 80% before border*/
 				}
 
 				div#walters div.projImgDiv img.rArrow, div#walters div.projImgDiv img.lArrow{
@@ -268,7 +309,7 @@ div#container{
 				}
 
 		div#winForm div.projImgDiv img.projDetailsImg, div#loudSensor div.projImgDiv img.projDetailsImg{
-			width: 86%;
+			width: 85%;	/*was 86% before border*/
 		}
 
 		div.projDescript{
@@ -318,6 +359,7 @@ div#container{
 	  opacity: .8;
 	  text-align:center;
 		cursor: pointer;
+		z-index: 3;
 	}
 
 	.hide{
@@ -332,74 +374,53 @@ div#container{
 		cursor: pointer;
 	}
 
-	/*SKILLS*/
-	div.skills h3{
-		cursor: pointer;
-		margin-bottom: .25em;
-	}
-
-	div.skills p{
-		display: none;
-		margin-left: 1em;
-		text-indent: 0;
-	}
-
-	div#futureSkills{
-		display: inline-block;
-		background-color: white;
-		border: 3px solid #607D7D;
-		border-radius: 10px;
-		padding: 1%;
-		margin-top: 4%;
-	}
-
-		div#futureSkills h3{
-			text-align: center;
-			margin: 0 0 1% 0;
-		}
-
-		div#futureSkills p{
-			font-size: 12pt;
-			text-indent: 0;
-			text-align: center;
-		}
-
-		div#futureSkills ul{
-			width: 70%;
-			margin: 1% 13% 0 17%;
-		}
-
-			div#futureSkills li{
-				float: left;
-				font-family: "Calling Cards", sans-serif;
-				font-size: 12pt;
-				font-weight: bold;
-				width: 45%;
-				margin-bottom: 1%;
-			}
-
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 300PX------------------------------------------------------------------*/
 @media screen and (min-width: 300px){
 
 	img.projPic{
 		width: 49%;
-		padding: 2% 2% 0 0;
+		margin: 2% 2% 0 0;
 	}
 }
 
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 500PX------------------------------------------------------------------*/
 @media screen and (min-width: 500px){
 
-	div#portraitContainer{
-		float: left;
-		width: 45%;
-		margin-right: 2%;
+	div#container{
+		padding: 2%;
 	}
 
-		div#portraits img#hoverPrompt{
-			left: -15px;
-			top: 5px;
+	div#portraitContainer{
+		float: left;
+		margin: 0 2% 0 0;
+	}
+
+	section{
+		margin-bottom: 2%;
+	}
+
+	section.role {
+			padding: 2%;
+	}
+
+	section.role h3{
+		text-align: left;
+	}
+
+	section.role div.moreRole {
+			padding: 2%;
+			margin: 2% -2% -2%;
+	}
+
+		section.role div.moreRole ul {
+				padding-left: 2%;
 		}
+
+	section.role img {
+		width: 50%;
+		float: left;
+		margin-right: 1.5em;
+	}
 
 	img.projPic{
 		width: 32%;
@@ -433,14 +454,28 @@ div#container{
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 750PX------------------------------------------------------------------*/
 @media screen and (min-width: 750px){
 
-	div#portraits img#hoverPrompt{
-		left: -60px;
-		top: 20px;
+	div#header{
+		width: 80%;
+		padding: 1% 10%;
+	}
+
+	h1{
+		text-align: left;
+		width: auto;
+	}
+
+	nav ul li{
+		padding: 0 1em 0 0;
+		font-size: 1.5em;
 	}
 
 	div#container{
 		width: 90%;
-		margin: auto;
+		margin: 6em auto 0;
+	}
+
+	section.role img {
+		width: 30%;
 	}
 
 	div.myLightbox{
@@ -470,6 +505,10 @@ div#container{
 			width: 48%;
 		}
 
+		div.myLightbox img.projDetailsImg{
+			margin: 0;
+		}
+
 		div.projDescript{
 			display: block;
 			float: left;
@@ -483,11 +522,6 @@ div#container{
 
 	div#container{
 		width: 80%;
-	}
-
-	div#portraits img#hoverPrompt{
-		left: -80px;
-		top: 20px;
 	}
 
 	div#walters{

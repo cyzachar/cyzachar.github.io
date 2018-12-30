@@ -5,17 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name = "description" content = "Cynthia Zachar: Full Stack Developer; IT and Human-Centered Computing Student at Rochester Institute of Technology">
 		<title>Cynthia Zachar</title>
-		<link rel = "shortcut icon" href = "assets/fav_font.png">
-		<link rel = "stylesheet" type = "text/css" media = "screen" href = "css/myStyle.css"/>
+		<link rel = "shortcut icon" href = "assets/favicon_cz.png">
 		<link href="css/featherlight.css" type="text/css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link rel = "stylesheet" type = "text/css" media = "screen" href = "css/myStyle.css"/>
 		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 		<script src="js/featherlight.js" type="text/javascript" charset="utf-8"></script>
 		<script type = "text/javascript" src = "js/script.js"></script>
 		<script>
       $(document).ready(function(){
 				animatePortrait();
+				loadProjects();
+				positionNav();
 
 				$(window).resize(function() {
+					handleResize();
+					positionNav();
 					if($('#pptInfo').css('display') == "block"){
 						positionLightbox($('#pptInfo'));
 					}
@@ -24,66 +29,131 @@
     </script>
 	</head>
 	<body>
+		<div id = "header">
+			<h1>Cynthia Zachar</h1>
+			<!--<h2>Insight, Illustration, &amp; Implementation</h2>-->
+			<!--<h2>Investigate, Illustrate, &amp; Implement</h2>-->
+			<!--<h2>Data, Design, & Development</h2>-->
+			<!--<h2>Discover, Design, Develop</h2>-->
+			<!--<h2>Investigate, Iterate, Innovate</h2>-->
+			<nav>
+				<ul>
+					<li onclick = "scrollToSection('about')">ABOUT</li>
+					<li onclick = "scrollToSection('experience')">EXPERIENCE</li>
+					<li onclick = "scrollToSection('projects')">PROJECTS</li>
+					<li><a href = "https://www.dropbox.com/s/fwt2qix6vpn9fuk/Zachar_Cynthia_IT_UX_Resume.pdf?dl=0" target = "_blank">RESUME</a></li>
+					<li><a href = "https://www.linkedin.com/in/cynthia-zachar" target = "_blank"><i class = 'fa fa-linkedin'></i></a></li>
+				</ul>
+			</nav>
+		</div>
 		<div id = "container">
-			<div id = "header">
-				<div id = "banner">
-					<h1>Cynthia Zachar</h1>
-				</div>
-				<nav>
-					<ul>
-						<li id = "curPage"><a href = "index.html">Home</a></li>
-						<li onclick = "navClickable(this)"><a href = "projects.html">Projects</a></li>
-						<li onclick = "navClickable(this)"><a href = "skills.html">Skills</a></li>
-						<!--<li><a href = "personality.html">Personality</a></li>-->
-					</ul>
-				</nav>
-			</div>
-			<div id = "content">
-				<!--<p id = "inProgress">**This website is a work in progress.  Responsive pages and additional content to come.**</p>-->
+			<section id = "about">
 				<div id = "portraitContainer">
 					<div id = "portraits">
-						<img id = "bottomPortrait" src = "assets/me.jpg" alt = "Cynthia Zachar"/>
+						<img id = "bottomPortrait" src = "assets/new_me.jpg" alt = "Cynthia Zachar"/>
 						<a href="#" onclick = "showLightbox('pptInfo')">
-							<img id = "topPortrait" src = "assets/ppt_me_i_tan.png" alt = "Cynthia Zachar"/>
+							<img id = "topPortrait" src = "assets/new_ppt_me.png" alt = "Cynthia Zachar"/>
 						</a>
 					</div>
 				</div>
-				<div>
-					<h2>Overview</h2>
+				<div id = "aboutText">
+					<h2>Objective</h2>
 					<p>
-						I'm a fifth year Information Technology and Human-Centered Computing student at the Rochester Institute of Technology.
-						But if you've checked out my <a class = "outsideInfo" href = "https://www.linkedin.com/in/cynthia-zachar" target = "_blank">LinkedIn profile</a> or my <a class = "outsideInfo" href = "https://www.dropbox.com/s/uhp8u29nv8onn2z/Zachar_Cynthia_IT_Resume.pdf?dl=0" target = "_blank">resume</a>, you already know that.
-						The purpose of this website is not to present the same information in a different format, but to give you a better idea of who I am and what kind of experience I have.
+						I'm looking for a full time job in application development, user experience (UX), user interface (UI) design, or some combination of the three (ideally) for after I graduate.  I'll be available to begin work in June 2019 at the earliest and I'm open to relocation.
+					</p>
+					<h2>About Me</h2>
+					<p>
+						I'm a 5th year Information Technology and Human-Centered Computing double major at the Rochester Institute of Technology (RIT), where I'll be graduating in May 2019.
+						A perfectionist and jack-of-all-trades, I hold myself to high standards in everything I do and can be counted on to consistently deliver quality work.
+						My dream job would be in an innovation role, where I'd have the opportunity to take a project through many of the phases of development: exploring an idea through research, gathering requirements, ideating, designing, prototyping, testing, and development (or simply communicating with the development team).
 					</p>
 				</div>
-				<div id = "rightNow">
-					<h3>Right now...</h3>
-					<p>
-						I'm looking for a full time job for after I graduate.  I'll be available to begin work in June 2019 and I'm open to relocation.
-					</p>
-				</div>
-				<div id = "darkBack" class = "hide">
-	        <!--dark, translucent background behind lightbox-->
-	      </div>
-				<div id = "pptInfo" class = "myLightbox hide">
-					<h4 id="closeIcon" onclick="closeLightboxByIcon(this)">x</h4>
-					<img src = "assets/pptAnimals.png" src = "PowerPoint Illustrations of Animals"/>
-					<h3>An Unusual Skill: PowerPoint Illustration</h3>
-					<p>
-						The portrait of myself as well as all the animals you see here were created using the drawing tools of Microsoft PowerPoint.
-						This seems an unusual choice of program, but when I was somewhere between the ages of 9 and 12, my sister and I created some elaborate PowerPoint slide shows as a means of entertaining ourselves.
-						These slides featured animated stories using characters that we built using basic shapes and freehand and text that linked between slides.
-						We built entire worlds for these characters -- likely inspired in part by Webkinz and Tamagotchi.
-					</p>
-					<p>
-						It turns out that I retained some of my drawing skills and sharpened them further when I created fish illustrations for a client programming class project (see projects page).
-						Now the drawings are almost entirely freehand and based off of images (rather than my imagination).
-						The drawing on my home page is based on a different image than the one it transitions from, so that's why it's a little off.
-						I do know how to use Adobe Illustrator fairly well but I keep coming back to PowerPoint when I know I can achieve the look I want with it.
-					</p>
-				</div>
-				<footer>Cynthia Zachar &copy; 2018</footer>
+			</section>
+
+			<section id = "experience">
+				<section class = "role">
+					<img src = "assets/developer.png"/>
+					<h3>Developer</h3>
+					<p>A full stack developer with experience in web, mobile, and desktop application development, I can do everything from setting up and accessing data from a database, serving and consuming information via an API, and implementing interactive and responsive user interfaces.  I also have some experience with wearable and internet of things technologies and with Amazon's Alexa Voice Service.</p>
+					<h4>Skills:</h4>
+					<p>Java &bull; C&sharp; &bull; Swift &bull; Javascript &bull; HTML/CSS &bull; PHP &bull; Git &bull; SQL &bull; jQuery &bull; Node.js</p>
+					<p class = "seeMore" onclick = "toggleExperience(this)">See More &darr;</p>
+					<div class = "moreRole">
+						<h4>Relevant Experience:</h4>
+						<ul>
+							<li>Developed Alexa Voice Service skills for the University of Pittsburgh Medical Center (UPMC) Enterprises</li>
+							<li>Worked on a prototype of my department's website</li>
+							<li>Used Google Script to make a system to help my department with assigning TAs to classes</li>
+							<li>Worked as a teaching assistant for object-oriented programming and database classes</li>
+							<li>Miscellaneous class projects (see projects section)</li>
+						</ul>
+					</div>
+				</section>
+				<section class = "role">
+					<img src = "assets/ux.png"/>
+					<h3>UX Researcher</h3>
+					<p>From my classes and my co-ops, I have experience planning and presenting research, conducting interviews and moderated user testing, creating prototypes, and participating in ideation sessions.  I'm familiar with many UX research methodologies and look forward to having the opportunity to learn and practice more.</p>
+					<h4>Skills:</h4>
+					<p>Prototyping &bull; Usability Testing &bull; Design Thinking &bull; InVision &bull; Minitab &bull; SPSS</p>
+					<p class = "seeMore" onclick = "toggleExperience(this)">See More &darr;</p>
+					<div class = "moreRole">
+						<h4>Relevant Experience:</h4>
+						<ul>
+							<li>Researched gamification and employee engagement, applying what I learned at Steelcase</li>
+							<li>Interviewed Steelcase distribution center employees to identify opportunities to improve engagement</li>
+							<li>Participated in a Design Thinking workshop at Steelcase and worked with a team that frequently utilized the framework</li>
+							<li>Analyzed the USA Ultimate (USAU) website to identify ways of improving user experience (see projects section)</li>
+							<li>Conducted moderated user testing at GEICO to determine the effectiveness of a set of interface designs</li>
+							<li>Participated in ideation sessions and observed other moderated tests at GEICO</li>
+							<li>Used InVision (and, less extensively, some other prototyping tools) to create application prototypes for classes or GEICO</li>
+							<li>Examined how my academic department's website could be improved from a UX perspective</li>
+						</ul>
+					</div>
+				</section>
+				<section class = "role">
+					<img src = "assets/design.png"/>
+					<h3>Designer</h3>
+					<p>I consider myself better at interaction design, diagrams/infographics, and layouts than at effectively applying style elements like colors and fonts (I don't quite have the "eye" for that kind of thing), but I enjoy having the opportunity to think creatively and to explore different design ideas and different ways of conveying a message or evoking a feeling.  I'm especially skilled at taking technical/complex concepts and presenting them to a variety of audiences in a way that demystifies or resonates.</p>
+					<h4>Skills:</h4>
+					<p>Photoshop &bull; Illustrator &bull; Sketch</p>
+					<p class = "seeMore" onclick = "toggleExperience(this)">See More &darr;</p>
+					<div class = "moreRole">
+						<h4>Relevant Experience:</h4>
+						<ul>
+							<li>Applied GEICO design kit standards to update existing interfaces and user flows</li>
+							<li>Participated in design review activities at GEICO</li>
+							<li>Developed a logo for internal use at GEICO</li>
+							<li>Created diagrams, visual aids, and reference sheets for some of the classes I've TAed</li>
+							<li>Miscellaneous graphics and wireframes for class and personal projects (e.g. all graphics on this website)</li>
+						</ul>
+					</div>
+				</section>
+			</section>	<!--end experience section-->
+
+			<section id = "projects">
+				<h2>Projects</h2>
+			</section>
+
+			<div id = "darkBack" class = "hide">
+        <!--dark, translucent background behind lightbox-->
+      </div>
+			<div id = "pptInfo" class = "myLightbox hide">
+				<h4 id="closeIcon" onclick="closeLightboxByIcon(this)">x</h4>
+				<img src = "assets/pptAnimals.png" src = "PowerPoint Illustrations of Animals"/>
+				<h3>An Unusual Skill: PowerPoint Illustration</h3>
+				<p>
+					The portrait of myself as well as all the animals you see here and many other graphics on the page were created using the drawing tools of Microsoft PowerPoint.
+					This seems an unusual choice of program, but when I was somewhere between the ages of 9 and 12, my sister and I created some elaborate PowerPoint slide shows as a means of entertaining ourselves.
+					These slides featured animated stories using characters that we built using basic shapes and freehand and text that linked between slides.
+					We built entire worlds for these characters -- likely inspired in part by Webkinz and Tamagotchi.
+				</p>
+				<p>
+					It turns out that I retained some of my drawing skills and sharpened them further when I created fish illustrations for a client programming class project (see projects page).
+					Now the drawings are almost entirely freehand and based off of images (rather than my imagination).
+					I do know how to use Adobe Illustrator fairly well but PowerPoint is what I have on my computer and I can generally achieve the look I want using it.
+				</p>
 			</div>
+			<footer>Cynthia Zachar &copy; 2018</footer>
 		</div>
 	</body>
 </html>
