@@ -37,9 +37,9 @@ div#container{
 				display: inline-block;
 				color: #292927;
 				font-family: 'Handsome Light', Arial, sans-serif;
-				font-size: 3.5em;
+				font-size: 3em;
 				text-align: center;
-				margin: 0;
+				margin: 0 .5em 0 0;
 				width: 100%;
 			}
 
@@ -58,7 +58,7 @@ div#container{
 					font-family: "Cicero Sans Negrita", sans-serif;
 					float: left;
 					padding: 0 1em 0 0;
-					font-size: 1.2em;
+					font-size: 1em;
 					color: #0892B1; 		/*turquoise*/
 					cursor: pointer;
 				}
@@ -385,6 +385,14 @@ div#container{
 
 /*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 500PX------------------------------------------------------------------*/
 @media screen and (min-width: 500px){
+
+	h1{
+		font-size: 3.5em;
+	}
+
+	nav ul li{
+		font-size: 1.2em;
+	}
 
 	div#container{
 		padding: 2%;
