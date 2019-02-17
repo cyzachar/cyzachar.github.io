@@ -1,0 +1,130 @@
+{
+  "poi": [
+    {
+      "poiID": 3,
+      "poiName": "Bartlett, Eliot",
+      "poiDescription": "Born 1759; died 1851 ; age 87.\r\n\r\nDr. DeMarle raises the question whether Eliot (or Elliot) Bartlett is recognized as a\r\nRevolutionary War Veteran (Vermont Militia).\r\n\r\n“Bartlett: Significantly there is very strong evidence pointing to the fact that Eliott Bartlett\r\nserved in the Revolutionary war, or to state it another way, that the Eliott Bartlett who served in\r\nthe revolutionary war, is the Eliott Bartlett who is in the Rapids cemetery.”\r\n\r\nSon: Orange Bartlett Born Dec. 16, 1789 in Vermont - (mother: Abigail).\r\nDied in Gates, NY Jan. 6, 1847.\r\n\r\nDaughter: Hannah Rose Bartlett (1818 -1902); born in Mass.",
+      "poiLocation": "Rapids Cemetery Plot J - 7",
+      "img_url": null,
+      "visible": 0,
+      "source": "MCNYGen (Halsey) ; Ancestry. Com;",
+      "inscription": null,
+      "x_coord": null,
+      "y_coord": null
+    },
+    {
+      "poiID": 4,
+      "poiName": "Black, Andrew",
+      "poiDescription": "no headstone found",
+      "poiLocation": "Rapids Cemetery Plot T - 9",
+      "img_url": null,
+      "visible": 0,
+      "source": "MCNYGen (Halsey) ; 1881 map",
+      "inscription": null,
+      "x_coord": null,
+      "y_coord": null
+    },
+    {
+      "poiID": 5,
+      "poiName": "Bartlett, Cyrus S.",
+      "poiDescription": "Son of Cyrus W. & Sara (second wife?); born 1829; died Aug.3, 1830; age 11 months",
+      "poiLocation": "unknown",
+      "img_url": null,
+      "visible": 0,
+      "source": "DAR",
+      "inscription": null,
+      "x_coord": null,
+      "y_coord": null
+    },
+    {
+      "poiID": 6,
+      "poiName": "Hulin, Charlotte",
+      "poiDescription": "- daughter of Truman & Charlotte; born 1837; died Jan. 25, 1862 ; age 25\r\n\r\n2-piece restorable Headstone (unearthed 2017)",
+      "poiLocation": "Rapids Cemetery Plot H - 7",
+      "img_url": "Emly Hulin inscription IMG_20170805_105900.jpeg",
+      "visible": 1,
+      "source": "DAR",
+      "inscription": "EMLY (sic) A.\r\ndaughter of Truman & Charlotte. HULIN\r\nDied January 25, 1862 /. Age 25 yrs; 4 months & 18(?) days\r\n(a 4-line epitaph is unreadable)",
+      "x_coord": 12,
+      "y_coord": 23
+    }
+  ],
+  "tags": [
+    "Flora",
+    "Civil War",
+    "Garden",
+    "Burial"
+  ],
+  "poiTags": [
+    {
+      "poiID": 3,
+      "tag_name": "Burial"
+    },
+    {
+      "poiID": 4,
+      "tag_name": "Burial"
+    },
+    {
+      "poiID": 5,
+      "tag_name": "Burial"
+    },
+    {
+      "poiID": 6,
+      "tag_name": "Burial"
+    }
+  ],
+  "locations": [
+    {
+      "hlID": 1,
+      "hl_name": "Susan B. Anthony House",
+      "hl_desc": "Susan B. Anthony House, in Rochester, New York, was the home of Susan B. Anthony for forty years, while she was a national figure in the women's rights movement. She was arrested in the front parlor after attempting to vote in the 1872 Presidential Election. She resided here until her death.",
+      "hl_url": "http://susanbanthonyhouse.org/index.php",
+      "is_trail": 0
+    },
+    {
+      "hlID": 2,
+      "hl_name": "Heritage Trail",
+      "hl_desc": "Come and explore history in downtown Rochester on The Heritage Trail, a 1.25-mile long walking path that leads visitors to 15 points of historical significance. This self-guided tour follows an 8” wide line of either granite or blue paint on city sidewalks, along the way visitors will find historical markers, plaques, and interpretive signs telling some of the stories that make up Rochester’s rich history.",
+      "hl_url": "https://www.cityofrochester.gov/article.aspx?id=8589951966",
+      "is_trail": 1
+    },
+    {
+      "hlID": 3,
+      "hl_name": "Canalway Trail",
+      "hl_desc": "The Canalway Trail offers hundreds of miles of scenic trails and numerous parks for walking, bicycling, cross country skiing, and other recreational activities.  This trail parallels the New York State Canal System, comprised of four historic waterways: the Erie, the Champlain, the Oswego, and the Cayuga-Seneca Canals.  The Canal System spans 524 miles across the Hudson River with Lake Champlain, Lake Ontario, the Finger Lakes, the Niagara River, and Lake Erie.",
+      "hl_url": "http://www.canals.ny.gov/trails/about.html",
+      "is_trail": 1
+    },
+    {
+      "hlID": 4,
+      "hl_name": "Camp Fitz-John Porter 1862",
+      "hl_desc": "Civil War recruit training camp; - regiments served in over 20 major battles; turned tide at Gettysburg",
+      "hl_url": "https://www.hmdb.org/marker.asp?marker=115287",
+      "is_trail": 0
+    },
+    {
+      "hlID": 5,
+      "hl_name": "Vacuum Oil",
+      "hl_desc": "1868-1932; distillation refinery (leather conditioners and illumination gas) [Energy: lubricants & fuel that made internal combustion engine patentable]",
+      "hl_url": "http://www.rochestersubway.com/topics/2015/11/inside-the-abandoned-vacuum-oil-refinery-rochester-ny/",
+      "is_trail": 0
+    }
+  ],
+  "tour": [
+    {
+      "poiID": 3,
+      "tour_order": 1,
+      "tour_id": 1
+    },
+    {
+      "poiID": 4,
+      "tour_order": 2,
+      "tour_id": 2
+    },
+    {
+      "poiID": 6,
+      "tour_order": 3,
+      "tour_id": 3
+    }
+  ]
+}
