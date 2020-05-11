@@ -1,0 +1,115 @@
+/*COMMON TO ALL PAGES*/
+body{
+	background-color: white;
+	padding: 0;
+	margin: 0;
+}
+
+.noScroll{
+  overflow: hidden;
+}
+
+div#banner{
+  background-color: #f5db26;
+  padding: .5% 2%;
+}
+
+  div#banner p{
+    font-size: 10pt;
+  }
+
+div#container{
+	display: block;
+	padding: 5%;
+}
+
+			/*h1 font*/
+			@font-face {
+				font-family: 'Handsome Light';
+				src: url('fonts/handsomelight.ttf') format('truetype');
+			}
+
+			h1{
+				display: inline-block;
+				color: #292927;
+				font-family: 'Handsome Light', Arial, sans-serif;
+				font-size: 3em;
+				text-align: center;
+				margin: 0;
+				width: 100%;
+			}
+
+		h2{
+			font-family: sans-serif;
+			margin: 0;
+			color: #595959;
+		}
+
+		p{
+			font-family: sans-serif;
+			font-size: 14pt;
+			padding: 0 0 .2em;
+			margin: 0;
+		}
+
+		div.aboutText p{
+			padding: 0 0 .5em;
+		}
+
+	footer{
+		font-family: sans-serif;
+		font-size: .8em;
+		clear: both;
+		color: #595959;
+	}
+
+  img#portrait{
+		display: block;
+		width: 244px;
+    height: 282px;
+		margin: 0 2% 2% auto;
+    float: left;
+	}
+
+/*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 500PX------------------------------------------------------------------*/
+@media screen and (min-width: 500px){
+
+	h1{
+		font-size: 3.5em;
+		margin: 0 .5em 0 0;
+	}
+
+	div#container{
+		padding: 2%;
+	}
+
+	div#portraitContainer{
+		float: left;
+		margin: 0 2% 0 0;
+	}
+
+	section{
+		margin-bottom: 2%;
+	}
+
+
+}
+
+/*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 750PX------------------------------------------------------------------*/
+@media screen and (min-width: 750px){
+
+	h1{
+		text-align: left;
+		width: auto;
+	}
+
+}
+
+/*-------------------------------------------------MEDIA QUERY: MIN-WIDTH 1000PX------------------------------------------------------------------*/
+@media screen and (min-width: 1000px){
+
+	div#container{
+		width: 80%;
+	}
+
+}
